@@ -1,218 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bilalive Music — Premium Live Music Across Europe</title>
-<meta name="description" content="One voice. One guitar. One unforgettable experience. Premium live music for weddings, corporate events, festivals and private celebrations across Europe.">
-<meta property="og:title" content="Bilalive Music — Premium Live Music Across Europe">
+<title>Bilalive Music — Avrupa Genelinde Premium Canlı Müzik</title>
+<meta name="description" content="Tek ses. Tek gitar. Unutulmaz bir deneyim. Avrupa genelinde düğün, nişan, kurumsal etkinlik, fuar ve özel davetler için premium canlı müzik. Türkiye'den bir ses.">
+<link rel="canonical" href="https://bilalivemusic.com/">
+<meta property="og:title" content="Bilalive Music — Avrupa Genelinde Premium Canlı Müzik">
 <meta property="og:description" content="One Voice. One Guitar. One Unforgettable Experience.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://bilalivemusic.com/">
+<meta property="og:image" content="https://bilalivemusic.com/assets/img/wedding-dance.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
-<style>
-:root{
-  --navy:#0B1020;
-  --surface:#111827;
-  --bg:#F8F7F4;
-  --accent:#FF5A4E;
-  --gold:#D9A441;
-  --success:#22C55E;
-  --text:#111827;
-  --text-2:#6B7280;
-  --r-sm:16px; --r-md:24px; --r-lg:32px;
-  --shadow-soft:0 8px 40px rgba(11,16,32,.08);
-  --shadow-deep:0 24px 80px rgba(11,16,32,.16);
-  --ease:cubic-bezier(.22,1,.36,1);
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D9A441' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18V5l12-2v13'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Ccircle cx='18' cy='16' r='3'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Bilalive Music",
+  "url": "https://bilalivemusic.com",
+  "slogan": "One Voice. One Guitar. One Unforgettable Experience.",
+  "genre": ["Acoustic", "Turkish Pop", "Live Music"],
+  "areaServed": "Europe",
+  "email": "info@bilalivemusic.com",
+  "parentOrganization": { "@type": "Organization", "name": "WeIntensify B.V.", "address": { "@type": "PostalAddress", "streetAddress": "Kanaalkade 57", "postalCode": "1811 LS", "addressLocality": "Alkmaar", "addressCountry": "NL" } }
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-.02em}
-.serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
-.container{max-width:1160px;margin:0 auto;padding:0 24px}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--accent);color:#fff}
-
-/* ---------- NAV ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s var(--ease),backdrop-filter .4s,box-shadow .4s}
-nav.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-.nav-inner{max-width:1160px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#fff;letter-spacing:-.01em}
-.logo em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--gold)}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.72);font-size:14.5px;font-weight:500;transition:color .25s}
-.nav-links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:13px 26px;border-radius:100px;cursor:pointer;border:none;transition:transform .3s var(--ease),box-shadow .3s,background .3s}
-.btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 28px rgba(255,90,78,.35)}
-.btn-accent:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,90,78,.45)}
-.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px)}
-.btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
-.btn-nav{padding:10px 20px;font-size:13.5px}
-@media(max-width:760px){.nav-links a:not(.btn){display:none}}
-
-/* ---------- HERO ---------- */
-.hero{position:relative;min-height:100svh;background:var(--navy);display:flex;align-items:center;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(1200px 700px at 78% 42%,rgba(217,164,65,.14),transparent 60%),
-  radial-gradient(900px 600px at 15% 85%,rgba(255,90,78,.12),transparent 55%),
-  radial-gradient(700px 500px at 50% -10%,rgba(99,102,241,.10),transparent 60%)}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%)}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%;max-width:1160px;margin:0 auto;padding:120px 24px 80px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-family:'Manrope',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px}
-.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(42px,6.2vw,76px);line-height:1.03;color:#fff;font-weight:800;margin-bottom:8px}
-.hero h1 .serif{color:var(--gold);font-weight:400}
-.hero-sub{color:rgba(255,255,255,.62);font-size:clamp(16px,1.6vw,19px);max-width:480px;margin:22px 0 12px}
-.hero-tags{display:flex;flex-wrap:wrap;gap:10px 22px;color:rgba(255,255,255,.45);font-size:14px;font-weight:500;margin:18px 0 38px}
-.hero-tags span{display:flex;align-items:center;gap:8px}
-.hero-tags span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-
-/* --- GUITAR ARTWORK --- */
-.guitar-stage{position:relative;display:flex;justify-content:center;align-items:center}
-.guitar-glow{position:absolute;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.22),rgba(255,90,78,.10) 45%,transparent 70%);filter:blur(48px);animation:breathe 6s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.12);opacity:1}}
-.guitar-svg{position:relative;width:min(420px,80vw);height:auto;filter:drop-shadow(0 32px 64px rgba(0,0,0,.55));animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(.8deg)}}
-.sound-ring{position:absolute;border:1px solid rgba(217,164,65,.25);border-radius:50%;animation:ring 4.5s var(--ease) infinite}
-.sound-ring:nth-child(2){animation-delay:1.5s}
-.sound-ring:nth-child(3){animation-delay:3s}
-@keyframes ring{0%{width:180px;height:180px;opacity:0}12%{opacity:.7}100%{width:560px;height:560px;opacity:0}}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;text-align:center;padding-top:130px}
-.hero-eyebrow{justify-content:center}.hero-eyebrow::before{display:none}
-.hero-sub{margin-left:auto;margin-right:auto}.hero-tags{justify-content:center}.hero-ctas{justify-content:center}
-.guitar-stage{order:-1;margin-bottom:8px}.guitar-svg{width:min(280px,64vw)}}
-
-/* ---------- MARQUEE ---------- */
-.marquee-wrap{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:22px 0;overflow:hidden}
-.marquee{display:flex;gap:64px;white-space:nowrap;animation:scroll 28s linear infinite;width:max-content}
-.marquee span{color:rgba(255,255,255,.34);font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:64px}
-.marquee span::after{content:"✦";color:var(--gold);opacity:.6;letter-spacing:0}
-@keyframes scroll{to{transform:translateX(-50%)}}
-
-/* ---------- SECTIONS ---------- */
-section{padding:110px 0}
-.eyebrow{color:var(--accent);font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
-.section-title{font-size:clamp(32px,4vw,48px);font-weight:800;line-height:1.12;margin-bottom:18px}
-.section-title .serif{color:var(--gold)}
-.section-sub{color:var(--text-2);font-size:17px;max-width:560px}
-
-/* about */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-.stat{background:#fff;border-radius:var(--r-sm);padding:22px 20px;box-shadow:var(--shadow-soft)}
-.stat b{display:block;font-family:'Manrope',sans-serif;font-size:30px;font-weight:800;color:var(--navy)}
-.stat small{color:var(--text-2);font-size:13px}
-.about-visual{position:relative;background:var(--navy);border-radius:var(--r-lg);aspect-ratio:4/4.6;overflow:hidden;box-shadow:var(--shadow-deep);display:flex;align-items:center;justify-content:center}
-.about-visual::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 70% 20%,rgba(217,164,65,.18),transparent 60%),radial-gradient(500px 400px at 20% 90%,rgba(255,90,78,.15),transparent 55%)}
-.about-visual .serif{position:relative;color:rgba(255,255,255,.92);font-size:clamp(26px,2.6vw,34px);line-height:1.35;text-align:center;padding:0 40px}
-.about-visual .serif b{color:var(--gold);font-weight:400}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}}
-
-/* videos */
-.dark{background:var(--navy);color:#fff}
-.dark .section-title{color:#fff}
-.dark .section-sub{color:rgba(255,255,255,.55)}
-.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
-.video-card{position:relative;aspect-ratio:16/10;border-radius:var(--r-md);overflow:hidden;cursor:pointer;background:var(--surface);transition:transform .45s var(--ease),box-shadow .45s}
-.video-card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,.5)}
-.video-thumb{position:absolute;inset:0;transition:transform .6s var(--ease)}
-.video-card:hover .video-thumb{transform:scale(1.05)}
-.video-card .label{position:absolute;left:20px;bottom:18px;z-index:2;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#fff}
-.video-card .label small{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:12.5px;color:rgba(255,255,255,.55);margin-top:2px}
-.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s,transform .35s var(--ease);z-index:2}
-.video-card:hover .play-btn{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.play-btn::after{content:"";border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff;margin-left:4px}
-@media(max-width:900px){.video-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.video-grid{grid-template-columns:1fr}}
-
-/* services */
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
-.service-card{background:#fff;border-radius:var(--r-md);padding:34px 28px;box-shadow:var(--shadow-soft);transition:transform .4s var(--ease),box-shadow .4s;position:relative;overflow:hidden}
-.service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));opacity:0;transition:opacity .4s}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-deep)}
-.service-card:hover::before{opacity:1}
-.service-icon{width:52px;height:52px;border-radius:var(--r-sm);background:linear-gradient(135deg,rgba(255,90,78,.1),rgba(217,164,65,.12));display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:22px}
-.service-card h3{font-size:19px;font-weight:800;margin-bottom:10px}
-.service-card p{color:var(--text-2);font-size:14.5px}
-@media(max-width:960px){.services-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.services-grid{grid-template-columns:1fr}}
-
-/* booking */
-.booking{background:var(--navy);position:relative;overflow:hidden}
-.booking::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 500px at 85% 15%,rgba(217,164,65,.12),transparent 60%),radial-gradient(700px 500px at 10% 90%,rgba(255,90,78,.1),transparent 55%)}
-.booking-grid{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
-.booking .section-title{color:#fff}
-.booking p.lead{color:rgba(255,255,255,.6);font-size:17px;margin-bottom:34px}
-.contact-line{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.75);font-size:15px;margin-bottom:16px}
-.contact-line .ico{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px}
-.form-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px);border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow-deep)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{margin-bottom:16px}
-.field label{display:block;color:rgba(255,255,255,.65);font-size:13px;font-weight:600;margin-bottom:8px;font-family:'Manrope',sans-serif}
-.field input,.field textarea,.field select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;transition:border-color .3s,background .3s;outline:none}
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold);background:rgba(255,255,255,.09)}
-.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.3)}
-.field select{appearance:none;-webkit-appearance:none;cursor:pointer}
-.field select option{background:var(--surface);color:#fff}
-.form-card .btn{width:100%;justify-content:center;margin-top:8px;padding:16px}
-.form-note{color:rgba(255,255,255,.4);font-size:12.5px;text-align:center;margin-top:14px}
-@media(max-width:900px){.booking-grid{grid-template-columns:1fr;gap:48px}.form-card{padding:28px}.form-row{grid-template-columns:1fr}}
-
-/* footer */
-footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
-.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:28px}
-.socials{display:flex;gap:12px}
-.socials a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s var(--ease);font-size:17px}
-.socials a:hover{background:var(--accent);transform:translateY(-3px)}
-.footer-bottom{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,.35)}
-
-/* reveal animations */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-}
-</style>
+</script>
 </head>
 <body>
 
+<!-- SVG ICON SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+  <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="9" cy="14" r="6"/><circle cx="15" cy="10" r="6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1m4 0h1M9 12h1m4 0h1M9 16h1m4 0h1"/></symbol>
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M3.5 21 12 4l8.5 17M12 4v17M6 21h12"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M8 22h8M12 15v7M5 3h14l-1.5 6.5a5.5 5.5 0 0 1-11 0z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-3-.4-4.2-1.1L3 20l1.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+  <symbol id="i-cookie" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9.5-9 3.5 3.5 0 0 0 4 4A3.5 3.5 0 0 0 21 12z"/><circle cx="9" cy="9" r=".8"/><circle cx="14" cy="14" r=".8"/><circle cx="9" cy="15" r=".8"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 12s0-3.5-.5-5A3 3 0 0 0 19.5 5C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.5A3 3 0 0 0 2.5 7C2 8.5 2 12 2 12s0 3.5.5 5a3 3 0 0 0 2 2c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2-2c.5-1.5.5-5 .5-5z"/><path d="m10 9.5 5 2.5-5 2.5z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M15 3v9.5a4.5 4.5 0 1 1-4.5-4.5M15 3a6 6 0 0 0 6 6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-11 11M22 2 15 22l-4-9-9-4z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="m15 8 5-3v14l-5-3"/><rect x="2" y="5" width="13" height="14" rx="3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+</svg>
+
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="logo">Bilalive <em>Music</em></a>
+    <a href="index.html" class="logo"><svg class="icon"><use href="#i-music"/></svg>Bilalive <em>Music</em></a>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#performances">Performances</a>
-      <a href="#services">Services</a>
-      <a href="#booking" class="btn btn-accent btn-nav">Book Your Event</a>
+      <a href="about.html" data-i18n="nav.about">Hakkımızda</a>
+      <a href="#performances" data-i18n="nav.performances">Performanslar</a>
+      <a href="#packages" data-i18n="nav.packages">Paketler</a>
+      <a href="contact.html" data-i18n="nav.contact">İletişim</a>
+      <div class="lang">
+        <button class="lang-toggle" type="button" aria-label="Dil seç">
+          <svg class="icon"><use href="#i-globe"/></svg><span data-lang-code>TR</span><svg class="icon chev"><use href="#i-chev"/></svg>
+        </button>
+        <div class="lang-menu">
+          <button type="button" data-set-lang="tr"><span class="flag">TR</span>Türkçe</button>
+          <button type="button" data-set-lang="en"><span class="flag">EN</span>English</button>
+          <button type="button" data-set-lang="de"><span class="flag">DE</span>Deutsch</button>
+          <button type="button" data-set-lang="nl"><span class="flag">NL</span>Nederlands</button>
+          <button type="button" data-set-lang="fr"><span class="flag">FR</span>Français</button>
+        </div>
+      </div>
+      <a href="#booking" class="btn btn-accent btn-nav" data-i18n="nav.book">Rezervasyon</a>
+      <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" data-i18n="nav.about">Hakkımızda</a>
+  <a href="#performances" data-i18n="nav.performances">Performanslar</a>
+  <a href="#packages" data-i18n="nav.packages">Paketler</a>
+  <a href="contact.html" data-i18n="nav.contact">İletişim</a>
+  <a href="#booking" class="btn btn-accent" data-i18n="nav.book">Rezervasyon</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">Live Performance · Europe</div>
-      <h1>One Voice.<br>One Guitar.<br><span class="serif">One Unforgettable Experience.</span></h1>
-      <p class="hero-sub">Premium live music across Europe — powerful vocals, live guitar and a modern one-man-orchestra stage setup that turns every event into a moment people never forget.</p>
+      <div class="hero-eyebrow" data-i18n="hero.eyebrow">Canlı Performans · Avrupa</div>
+      <h1><span data-i18n="hero.h1a">Tek Ses.</span><br><span data-i18n="hero.h1b">Tek Gitar.</span><br><span class="serif" data-i18n="hero.h1c">Unutulmaz Bir Deneyim.</span></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Türkiye'den bir ses, şimdi Avrupa sahnelerinde — güçlü vokal ve canlı gitarla her etkinliği insanların asla unutmayacağı bir ana dönüştürüyoruz.</p>
       <div class="hero-tags">
-        <span>Weddings</span><span>Festivals</span><span>Corporate Events</span><span>Private Celebrations</span>
+        <span data-i18n="hero.t1">Düğünler</span><span data-i18n="hero.t2">Festivaller</span><span data-i18n="hero.t3">Kurumsal</span><span data-i18n="hero.t4">Özel Davetler</span>
       </div>
       <div class="hero-ctas">
-        <a href="#booking" class="btn btn-accent">Book Your Event</a>
-        <a href="#performances" class="btn btn-ghost">▶&nbsp; Watch Performances</a>
+        <a href="#booking" class="btn btn-accent"><span data-i18n="hero.book">Etkinliğini Rezerve Et</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a href="#performances" class="btn btn-ghost"><svg class="icon"><use href="#i-play"/></svg><span data-i18n="hero.watch">Performansları İzle</span></a>
       </div>
     </div>
     <div class="guitar-stage">
       <div class="sound-ring"></div><div class="sound-ring"></div><div class="sound-ring"></div>
       <div class="guitar-glow"></div>
-      <svg class="guitar-svg" viewBox="0 0 420 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Acoustic guitar artwork">
+      <svg class="guitar-svg" viewBox="0 0 420 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Akustik gitar">
         <defs>
           <linearGradient id="bodyG" x1="90" y1="300" x2="360" y2="640" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#1B2440"/><stop offset=".55" stop-color="#141B33"/><stop offset="1" stop-color="#0D1226"/>
@@ -230,12 +128,10 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
             <stop offset="0" stop-color="#F4E3B8"/><stop offset="1" stop-color="#C9A050"/>
           </linearGradient>
         </defs>
-        <!-- headstock -->
         <path d="M196 18 Q210 8 224 18 L232 88 L188 88 Z" fill="url(#neckG)" stroke="#D9A441" stroke-opacity=".35" stroke-width="1.5"/>
         <circle cx="196" cy="34" r="4.5" fill="#D9A441"/><circle cx="224" cy="34" r="4.5" fill="#D9A441"/>
         <circle cx="194" cy="54" r="4.5" fill="#D9A441"/><circle cx="226" cy="54" r="4.5" fill="#D9A441"/>
         <circle cx="193" cy="74" r="4.5" fill="#D9A441"/><circle cx="227" cy="74" r="4.5" fill="#D9A441"/>
-        <!-- neck -->
         <rect x="192" y="88" width="36" height="272" rx="4" fill="url(#neckG)"/>
         <rect x="188" y="86" width="44" height="10" rx="3" fill="#E9D8A6"/>
         <g stroke="#D9A441" stroke-opacity=".4" stroke-width="1.6">
@@ -247,48 +143,21 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
         <circle cx="210" cy="180" r="3.4" fill="#D9A441" opacity=".8"/>
         <circle cx="210" cy="243" r="3.4" fill="#D9A441" opacity=".8"/>
         <circle cx="210" cy="300" r="3.4" fill="#D9A441" opacity=".8"/>
-        <!-- body -->
-        <path d="M210 342
-          C 150 342 118 366 112 404
-          C 107 436 122 456 122 474
-          C 122 496 96 512 96 552
-          C 96 606 148 636 210 636
-          C 272 636 324 606 324 552
-          C 324 512 298 496 298 474
-          C 298 456 313 436 308 404
-          C 302 366 270 342 210 342 Z"
-          fill="url(#bodyG)" stroke="url(#rimG)" stroke-width="3"/>
-        <path d="M210 356
-          C 158 356 131 377 126 409
-          C 122 437 136 455 136 475
-          C 136 499 110 515 110 552
-          C 110 598 156 622 210 622
-          C 264 622 310 598 310 552
-          C 310 515 284 499 284 475
-          C 284 455 298 437 294 409
-          C 289 377 262 356 210 356 Z"
-          fill="none" stroke="#D9A441" stroke-opacity=".18" stroke-width="1.5"/>
-        <!-- sound hole -->
+        <path d="M210 342 C 150 342 118 366 112 404 C 107 436 122 456 122 474 C 122 496 96 512 96 552 C 96 606 148 636 210 636 C 272 636 324 606 324 552 C 324 512 298 496 298 474 C 298 456 313 436 308 404 C 302 366 270 342 210 342 Z" fill="url(#bodyG)" stroke="url(#rimG)" stroke-width="3"/>
+        <path d="M210 356 C 158 356 131 377 126 409 C 122 437 136 455 136 475 C 136 499 110 515 110 552 C 110 598 156 622 210 622 C 264 622 310 598 310 552 C 310 515 284 499 284 475 C 284 455 298 437 294 409 C 289 377 262 356 210 356 Z" fill="none" stroke="#D9A441" stroke-opacity=".18" stroke-width="1.5"/>
         <circle cx="210" cy="470" r="52" fill="url(#holeG)"/>
         <circle cx="210" cy="470" r="52" fill="none" stroke="url(#rimG)" stroke-width="3"/>
         <circle cx="210" cy="470" r="60" fill="none" stroke="#D9A441" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 6"/>
-        <!-- bridge -->
         <rect x="164" y="556" width="92" height="18" rx="9" fill="#1E2743" stroke="#D9A441" stroke-opacity=".5" stroke-width="1.5"/>
-        <!-- strings -->
         <g stroke="url(#strG)" stroke-width="1.3" opacity=".95">
-          <line x1="196" y1="90" x2="176" y2="565"/>
-          <line x1="201.5" y1="90" x2="189.5" y2="565"/>
-          <line x1="207" y1="90" x2="203" y2="565"/>
-          <line x1="213" y1="90" x2="217" y2="565"/>
-          <line x1="218.5" y1="90" x2="230.5" y2="565"/>
-          <line x1="224" y1="90" x2="244" y2="565"/>
+          <line x1="196" y1="90" x2="176" y2="565"/><line x1="201.5" y1="90" x2="189.5" y2="565"/>
+          <line x1="207" y1="90" x2="203" y2="565"/><line x1="213" y1="90" x2="217" y2="565"/>
+          <line x1="218.5" y1="90" x2="230.5" y2="565"/><line x1="224" y1="90" x2="244" y2="565"/>
         </g>
-        <!-- pins -->
         <g fill="#D9A441">
           <circle cx="176" cy="565" r="2.6"/><circle cx="189.5" cy="565" r="2.6"/><circle cx="203" cy="565" r="2.6"/>
           <circle cx="217" cy="565" r="2.6"/><circle cx="230.5" cy="565" r="2.6"/><circle cx="244" cy="565" r="2.6"/>
         </g>
-        <!-- light sweep -->
         <path d="M150 380 Q 210 350 280 385 L 268 402 Q 210 372 160 396 Z" fill="#fff" opacity=".05"/>
       </svg>
     </div>
@@ -298,26 +167,38 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee">
-    <span>Weddings</span><span>Corporate Events</span><span>Festivals</span><span>Private Events</span><span>Engagements</span><span>Henna Nights</span>
-    <span>Weddings</span><span>Corporate Events</span><span>Festivals</span><span>Private Events</span><span>Engagements</span><span>Henna Nights</span>
+    <span>Düğün</span><span>Nişan</span><span>Kına</span><span>Kurumsal</span><span>Fuar</span><span>Festival</span><span>Restoran</span><span>Özel Davet</span>
+    <span>Düğün</span><span>Nişan</span><span>Kına</span><span>Kurumsal</span><span>Fuar</span><span>Festival</span><span>Restoran</span><span>Özel Davet</span>
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- MOMENTS STRIP -->
+<div class="moments">
+  <div class="moments-track">
+    <div class="moment reveal"><img src="assets/img/wedding-dance.jpg" alt="Düğünde ilk dans" loading="lazy"><span>Düğün</span></div>
+    <div class="moment reveal"><img src="assets/img/wedding-sparklers.jpg" alt="Kutlama anı" loading="lazy"><span>Kutlama</span></div>
+    <div class="moment reveal"><img src="assets/img/venue-hall.jpg" alt="Etkinlik mekanı" loading="lazy"><span>Mekan &amp; Davet</span></div>
+    <div class="moment reveal"><img src="assets/img/city-prague.jpg" alt="Avrupa şehri" loading="lazy"><span>Avrupa Turu</span></div>
+  </div>
+</div>
+
+<!-- ABOUT TEASER -->
 <section id="about">
   <div class="container about-grid">
     <div class="reveal">
-      <div class="eyebrow">About</div>
-      <h2 class="section-title">Years on stage.<br><span class="serif">One man. Full orchestra.</span></h2>
-      <p class="section-sub">Bilal has spent years performing live across Europe. Using a modern one-man-orchestra system, he delivers live vocals and live guitar backed by professional performance technology — the energy of a full band, the intimacy of a single artist.</p>
+      <div class="eyebrow" data-i18n="about.eyebrow">Hakkımızda</div>
+      <h2 class="section-title"><span data-i18n="about.title1">15 yıldır sahnede.</span><br><span class="serif" data-i18n="about.title2">Türkiye'den bir ses.</span></h2>
+      <p class="section-sub" data-i18n="about.body">Bilal Yılmaz 15 yıl boyunca Türkiye'nin dört bir yanında canlı müzik yaptı. Şimdi hayatına Avrupa'da devam ediyor — buradaki Türklere Türkiye'den bir ses olmak için sahnede: canlı vokal, canlı gitar, memleket sıcaklığı.</p>
       <div class="about-stats">
-        <div class="stat"><b>100%</b><small>Live vocals & guitar</small></div>
-        <div class="stat"><b>EU</b><small>Performing across Europe</small></div>
-        <div class="stat"><b>1</b><small>Man. Full stage sound.</small></div>
+        <div class="stat"><b>15+</b><small data-i18n="about.s1">Yıl sahne deneyimi</small></div>
+        <div class="stat"><b>100%</b><small data-i18n="about.s2">Canlı vokal &amp; gitar</small></div>
+        <div class="stat"><b>EU</b><small data-i18n="about.s3">Tüm Avrupa'da</small></div>
       </div>
+      <p style="margin-top:32px"><a href="about.html" class="btn btn-dark"><span data-i18n="about.more">Hikayenin tamamını oku</span><svg class="icon"><use href="#i-arrow"/></svg></a></p>
     </div>
-    <div class="about-visual reveal">
-      <p class="serif">“The goal was never just music.<br>It's the <b>moment</b> people<br>never forget.”</p>
+    <div class="about-visual photo reveal">
+      <img src="assets/img/wedding-stage.jpg" alt="Açık hava etkinlik sahnesi" loading="lazy">
+      <div class="quote-over"><p class="serif" data-i18n="about.quote">"Amaç hiçbir zaman sadece müzik olmadı. Amaç, insanların asla unutmayacağı o an."</p></div>
     </div>
   </div>
 </section>
@@ -326,68 +207,211 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
 <section id="performances" class="dark">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow">Featured Performances</div>
-      <h2 class="section-title">Watch it <span class="serif">live.</span></h2>
-      <p class="section-sub">A taste of the stage — real events, real audience, real live sound. Full videos on Instagram & YouTube.</p>
+      <div class="eyebrow" data-i18n="vid.eyebrow">Performanslar</div>
+      <h2 class="section-title"><span data-i18n="vid.title1">Canlı</span> <span class="serif" data-i18n="vid.title2">izle.</span></h2>
+      <p class="section-sub" data-i18n="vid.sub">Gerçek performanslar — ses ve gitar, canlı. Yakında: Avrupa'nın en güzel şehirlerinde, en özel noktalarda çekilen yeni seriler.</p>
     </div>
     <div class="video-grid reveal">
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#1B2440,#3B2333)"></div>
-        <div class="play-btn"></div><div class="label">Wedding Highlights<small>Live set</small></div>
-      </a>
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#16203C,#2E3A2A)"></div>
-        <div class="play-btn"></div><div class="label">Acoustic Session<small>Voice & guitar</small></div>
-      </a>
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#241B40,#40261B)"></div>
-        <div class="play-btn"></div><div class="label">Festival Stage<small>Open air</small></div>
-      </a>
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#1B3040,#403A1B)"></div>
-        <div class="play-btn"></div><div class="label">Corporate Event<small>Private booking</small></div>
-      </a>
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#401B2B,#1B2440)"></div>
-        <div class="play-btn"></div><div class="label">Henna Night<small>Traditional set</small></div>
-      </a>
-      <a class="video-card" href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#1B4034,#2B1B40)"></div>
-        <div class="play-btn"></div><div class="label">Private Celebration<small>Intimate show</small></div>
-      </a>
+      <div class="video-card" data-video="DxQLY8-yCsU" role="button" tabindex="0" aria-label="Yeni Türkü — Fırtına (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/DxQLY8-yCsU.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">Fırtına — Yeni Türkü<small>Akustik cover</small></div>
+      </div>
+      <div class="video-card" data-video="aVB9-q1wzZU" role="button" tabindex="0" aria-label="Ezginin Günlüğü — Martı (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/aVB9-q1wzZU.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">Martı — Ezginin Günlüğü<small>Akustik cover</small></div>
+      </div>
+      <div class="video-card" data-video="qRONwITiIoo" role="button" tabindex="0" aria-label="Teoman — Kadının Gidişi (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/qRONwITiIoo.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">Kadının Gidişi — Teoman<small>Akustik cover</small></div>
+      </div>
+      <div class="video-card" data-video="DVrVOIOtM1s" role="button" tabindex="0" aria-label="Teoman — İstasyon İnsanları (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/DVrVOIOtM1s.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">İstasyon İnsanları — Teoman<small>Akustik cover</small></div>
+      </div>
+      <div class="video-card" data-video="MFMghiNmzVw" role="button" tabindex="0" aria-label="Bana Bir Masal Anlat Baba (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/MFMghiNmzVw.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">Bana Bir Masal Anlat Baba<small>Akustik cover</small></div>
+      </div>
+      <div class="video-card" data-video="RYrEBZJpqnQ" role="button" tabindex="0" aria-label="Yaşar Kurt — Ah Mamu (Cover)">
+        <div class="video-thumb img" style="background-image:url('assets/img/thumbs/RYrEBZJpqnQ.jpg')"></div>
+        <div class="play-btn"><svg class="icon"><use href="#i-play"/></svg></div>
+        <div class="label">Ah Mamu — Yaşar Kurt<small>Akustik cover</small></div>
+      </div>
     </div>
+    <a class="video-more" href="https://www.youtube.com/@NefessAl" target="_blank" rel="noopener"><span data-i18n="vid.more">YouTube'da daha fazlasını gör</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow" data-i18n="pk.eyebrow">Paketler</div>
+      <h2 class="section-title"><span data-i18n="pk.title1">Her bütçeye uygun</span> <span class="serif" data-i18n="pk.title2">canlı müzik.</span></h2>
+      <p class="section-sub" data-i18n="pk.sub">Etkinlik türüne ve bütçene göre filtrele. Her paket gerçek canlı performanstır — bir başlangıç noktası seç, gerisini birlikte sana göre şekillendirelim.</p>
+    </div>
+    <div class="pkg-filters reveal">
+      <div class="filter-row">
+        <span class="flabel">Etkinlik</span>
+        <button class="chip active" data-filter-event="all" data-i18n="pk.f_all">Tümü</button>
+        <button class="chip" data-filter-event="wedding" data-i18n="pk.f_wedding">Düğün</button>
+        <button class="chip" data-filter-event="engagement" data-i18n="pk.f_engagement">Nişan / Kına</button>
+        <button class="chip" data-filter-event="restaurant" data-i18n="pk.f_restaurant">Restoran / Mekan</button>
+        <button class="chip" data-filter-event="corporate" data-i18n="pk.f_corporate">Kurumsal</button>
+        <button class="chip" data-filter-event="fair" data-i18n="pk.f_fair">Fuar / Festival</button>
+        <button class="chip" data-filter-event="private" data-i18n="pk.f_private">Özel Davet</button>
+      </div>
+      <div class="filter-row">
+        <span class="flabel">Bütçe</span>
+        <button class="chip active" data-filter-budget="all" data-i18n="pk.b_all">Tümü</button>
+        <button class="chip" data-filter-budget="low"><span class="budget-dots">€</span></button>
+        <button class="chip" data-filter-budget="mid"><span class="budget-dots">€€</span></button>
+        <button class="chip" data-filter-budget="high"><span class="budget-dots">€€€</span></button>
+        <button class="chip" data-filter-budget="top"><span class="budget-dots">€€€€</span></button>
+      </div>
+    </div>
+    <div class="pkg-grid" id="pkgGrid">
+      <!-- 1: Akustik -->
+      <div class="pkg reveal" data-events="restaurant private engagement corporate" data-budget="low">
+        <div class="pkg-media">
+          <img src="assets/img/venue-hall.jpg" alt="Akustik set — mekan" loading="lazy">
+          <span class="tag">Akustik Set</span><span class="budget">€</span>
+        </div>
+        <div class="pkg-body">
+          <h3>Akustik</h3>
+          <p class="pkg-price"><span class="from" data-i18n="pk.from">başlangıç</span> <b>€500</b><span class="dur"><span data-i18n="pk.duration">Süre</span>: 2 saate kadar</span></p>
+          <ul class="pkg-incl">
+            <li><svg class="icon"><use href="#i-check"/></svg>Canlı vokal + akustik gitar</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Kompakt ses sistemi (150 kişiye kadar)</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Restoran, nişan, ev daveti için ideal</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>İstek parça listesi</li>
+          </ul>
+          <button class="btn btn-dark" type="button" data-request-pkg="Akustik" data-i18n="pk.request">Bu paketi talep et</button>
+        </div>
+      </div>
+      <!-- 2: Düğün Klasik -->
+      <div class="pkg reveal" data-events="wedding engagement private corporate" data-budget="mid">
+        <div class="pkg-media">
+          <img src="assets/img/wedding-reception.jpg" alt="Düğün klasik paket" loading="lazy">
+          <span class="tag">En Çok Tercih Edilen</span><span class="budget">€€</span>
+        </div>
+        <div class="pkg-body">
+          <h3>Düğün Klasik</h3>
+          <p class="pkg-price"><span class="from" data-i18n="pk.from">başlangıç</span> <b>€1.250</b><span class="dur"><span data-i18n="pk.duration">Süre</span>: 4 saate kadar</span></p>
+          <ul class="pkg-incl">
+            <li><svg class="icon"><use href="#i-check"/></svg>Tek kişilik orkestra — tam sahne sesi</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Profesyonel ses sistemi (300 kişiye kadar)</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>İlk dans + program akışı yönetimi</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Türkçe ağırlıklı, isteğe göre repertuvar</li>
+          </ul>
+          <button class="btn btn-dark" type="button" data-request-pkg="Düğün Klasik" data-i18n="pk.request">Bu paketi talep et</button>
+        </div>
+      </div>
+      <!-- 3: Düğün Premium -->
+      <div class="pkg featured reveal" data-events="wedding engagement corporate" data-budget="high">
+        <div class="pkg-media">
+          <img src="assets/img/wedding-dance.jpg" alt="Düğün premium paket" loading="lazy">
+          <span class="tag">Premium</span><span class="budget">€€€</span>
+        </div>
+        <div class="pkg-body">
+          <h3>Düğün Premium</h3>
+          <p class="pkg-price"><span class="from" data-i18n="pk.from">başlangıç</span> <b>€2.500</b><span class="dur"><span data-i18n="pk.duration">Süre</span>: Tüm gece</span></p>
+          <ul class="pkg-incl">
+            <li><svg class="icon"><use href="#i-check"/></svg>Tüm gece canlı performans + DJ geçişleri</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Premium ses + sahne ışık kurulumu</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Kişiye özel sürpriz &amp; özel anlar planı</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Ön görüşme + prova</li>
+          </ul>
+          <button class="btn btn-accent" type="button" data-request-pkg="Düğün Premium" data-i18n="pk.request">Bu paketi talep et</button>
+        </div>
+      </div>
+      <!-- 4: Büyük Sahne -->
+      <div class="pkg reveal" data-events="fair corporate" data-budget="top">
+        <div class="pkg-media">
+          <img src="assets/img/wedding-stage.jpg" alt="Fuar ve festival sahnesi" loading="lazy">
+          <span class="tag">Sahne Prodüksiyon</span><span class="budget">€€€€</span>
+        </div>
+        <div class="pkg-body">
+          <h3>Fuar &amp; Festival</h3>
+          <p class="pkg-price"><span class="from" data-i18n="pk.from">başlangıç</span> <b>€4.000</b><span class="dur"><span data-i18n="pk.duration">Süre</span>: Etkinliğe göre</span></p>
+          <ul class="pkg-incl">
+            <li><svg class="icon"><use href="#i-check"/></svg>Büyük sahne performansı + tam prodüksiyon</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Profesyonel sahne, ses ve ışık ekibi</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Belediye etkinlikleri, fuar ve festivaller</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Teknik rider &amp; kurulum koordinasyonu</li>
+          </ul>
+          <button class="btn btn-dark" type="button" data-request-pkg="Fuar & Festival" data-i18n="pk.request">Bu paketi talep et</button>
+        </div>
+      </div>
+      <p class="pkg-empty" id="pkgEmpty" data-i18n="pk.empty">Bu filtreye uyan paket yok. Başka bir kombinasyon dene veya özel teklif iste.</p>
+    </div>
+    <p class="pkg-custom"><a href="#booking" data-i18n="pk.custom">Sana özel bir şey mi lazım? Özel teklif iste →</a></p>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="dark" style="padding-top:90px">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow">Services</div>
-      <h2 class="section-title">Every event deserves <span class="serif">real live music.</span></h2>
+      <div class="eyebrow" data-i18n="srv.eyebrow">Hizmetler</div>
+      <h2 class="section-title"><span data-i18n="srv.title1">Her etkinlik</span> <span class="serif" data-i18n="srv.title2">gerçek canlı müziği hak eder.</span></h2>
     </div>
     <div class="services-grid reveal">
       <div class="service-card">
-        <div class="service-icon">💍</div>
-        <h3>Weddings</h3>
-        <p>Modern wedding performances — from the first dance to the last song of the night.</p>
+        <div class="service-icon"><svg class="icon"><use href="#i-rings"/></svg></div>
+        <h3 data-i18n="srv.w_h">Düğünler</h3>
+        <p data-i18n="srv.w_p">İlk danstan gecenin son şarkısına — modern düğün performansları.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🏢</div>
-        <h3>Corporate</h3>
-        <p>Company events, galas and receptions with a premium, professional stage presence.</p>
+        <div class="service-icon"><svg class="icon"><use href="#i-building"/></svg></div>
+        <h3 data-i18n="srv.c_h">Kurumsal</h3>
+        <p data-i18n="srv.c_p">Şirket etkinlikleri, galalar ve davetler için premium sahne duruşu.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🎪</div>
-        <h3>Festivals</h3>
-        <p>Festivals, fairs and public events — big-stage energy from a one-man orchestra.</p>
+        <div class="service-icon"><svg class="icon"><use href="#i-tent"/></svg></div>
+        <h3 data-i18n="srv.f_h">Fuar &amp; Festival</h3>
+        <p data-i18n="srv.f_p">Fuarlar, festivaller ve halka açık etkinlikler — büyük sahne enerjisi.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🥂</div>
-        <h3>Private Events</h3>
-        <p>Birthdays, celebrations and private invitations with an unforgettable atmosphere.</p>
+        <div class="service-icon"><svg class="icon"><use href="#i-glass"/></svg></div>
+        <h3 data-i18n="srv.p_h">Özel &amp; Mekan</h3>
+        <p data-i18n="srv.p_p">Restoranlar, doğum günleri ve özel davetler için unutulmaz atmosfer.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (sample) -->
+<section id="testimonials" style="padding-top:90px">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow" data-i18n="tst.eyebrow">Yorumlar</div>
+      <h2 class="section-title"><span data-i18n="tst.title1">İnsanlar ne</span> <span class="serif" data-i18n="tst.title2">hissediyor.</span></h2>
+      <p class="section-sub" data-i18n="tst.sub">Avrupa'nın dört bir yanındaki etkinliklerden anlar.</p>
+    </div>
+    <div class="values reveal" style="grid-template-columns:repeat(3,1fr)">
+      <div class="value">
+        <div class="vi"><svg class="icon"><use href="#i-star"/></svg></div>
+        <p style="font-size:15px;color:var(--text);margin-bottom:14px" data-i18n="tst.q1">"Sadece müzik çalmadı — salonu okudu ve bütün geceyi sırtladı. Misafirlerimiz hala konuşuyor."</p>
+        <p style="font-size:13px" data-i18n="tst.a1">Düğün · Amsterdam</p>
+      </div>
+      <div class="value">
+        <div class="vi"><svg class="icon"><use href="#i-star"/></svg></div>
+        <p style="font-size:15px;color:var(--text);margin-bottom:14px" data-i18n="tst.q2">"Tek kişi ama sahne dolu dolu hissettirdi. Türkçe şarkılar herkesi ayağa kaldırdı."</p>
+        <p style="font-size:13px" data-i18n="tst.a2">Nişan · Köln</p>
+      </div>
+      <div class="value">
+        <div class="vi"><svg class="icon"><use href="#i-star"/></svg></div>
+        <p style="font-size:15px;color:var(--text);margin-bottom:14px" data-i18n="tst.q3">"İlk temastan son şarkıya kadar profesyonel. Tam umduğumuz atmosfer."</p>
+        <p style="font-size:13px" data-i18n="tst.a3">Kurumsal gece · Rotterdam</p>
+      </div>
+    </div>
+    <p style="margin-top:22px;font-size:12.5px;color:var(--text-2)" data-i18n="tst.note">Örnek yorumlardır — lansmandan önce gerçek müşteri yorumlarıyla değiştirilecektir.</p>
   </div>
 </section>
 
@@ -395,30 +419,65 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
 <section id="booking" class="booking">
   <div class="container booking-grid">
     <div class="reveal">
-      <div class="eyebrow" style="color:var(--gold)">Booking</div>
-      <h2 class="section-title">Let's make your event <span class="serif">unforgettable.</span></h2>
-      <p class="lead">Tell us about your event — date, city and what you're celebrating. You'll get a personal reply, fast.</p>
-      <div class="contact-line"><div class="ico">📩</div> info@bilalivemusic.com</div>
-      <div class="contact-line"><div class="ico">💬</div> WhatsApp — fastest response</div>
-      <div class="contact-line"><div class="ico">📍</div> Based in Europe · Traveling everywhere</div>
+      <div class="eyebrow" style="color:var(--gold)" data-i18n="bk.eyebrow">Rezervasyon</div>
+      <h2 class="section-title"><span data-i18n="bk.title1">Etkinliğini birlikte</span> <span class="serif" data-i18n="bk.title2">unutulmaz yapalım.</span></h2>
+      <p class="lead" data-i18n="bk.lead">Etkinliğini anlat — tarih, şehir ve neyi kutladığın. Her rezervasyon bu formla başlar; sana e-posta ile kişisel dönüş yapıyoruz.</p>
+      <div class="booking-visual"><img src="assets/img/wedding-sparklers.jpg" alt="Kutlama" loading="lazy"></div>
+      <div class="contact-line"><div class="ico"><svg class="icon"><use href="#i-mail"/></svg></div><span>info@bilalivemusic.com</span></div>
+      <div class="contact-line"><div class="ico"><svg class="icon"><use href="#i-chat"/></svg></div><span data-i18n="bk.whats">WhatsApp — hızlı sorular için</span></div>
+      <div class="contact-line"><div class="ico"><svg class="icon"><use href="#i-pin"/></svg></div><span data-i18n="bk.loc">Avrupa merkezli · Her yere geliriz</span></div>
     </div>
     <form class="form-card reveal" id="bookingForm">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
       <div class="form-row">
-        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Your name" required></div>
-        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="+31 6 ..." required></div>
+        <div class="field"><label for="f-name" data-i18n="bk.f_name">Ad Soyad</label><input id="f-name" name="name" type="text" data-i18n-attr="placeholder:bk.f_name_ph" placeholder="Adın" required></div>
+        <div class="field"><label for="f-phone" data-i18n="bk.f_phone">Telefon</label><input id="f-phone" name="phone" type="tel" placeholder="+31 6 ..." required></div>
       </div>
       <div class="form-row">
-        <div class="field"><label for="f-date">Event date</label><input id="f-date" type="date" required></div>
-        <div class="field"><label for="f-city">City</label><input id="f-city" type="text" placeholder="Amsterdam, Berlin ..." required></div>
+        <div class="field"><label for="f-date" data-i18n="bk.f_date">Etkinlik tarihi</label><input id="f-date" name="date" type="date" required></div>
+        <div class="field"><label for="f-city" data-i18n="bk.f_city">Şehir</label><input id="f-city" name="city" type="text" data-i18n-attr="placeholder:bk.f_city_ph" placeholder="Amsterdam, Berlin ..." required></div>
       </div>
-      <div class="field"><label for="f-type">Event type</label>
-        <select id="f-type">
-          <option>Wedding</option><option>Engagement / Henna</option><option>Corporate Event</option><option>Festival</option><option>Private Celebration</option><option>Other</option>
-        </select>
+      <div class="form-row">
+        <div class="field"><label for="f-type" data-i18n="bk.f_type">Etkinlik türü</label>
+          <select id="f-type" name="event_type">
+            <option data-i18n="opt.wedding">Düğün</option>
+            <option data-i18n="opt.engagement">Nişan / Kına</option>
+            <option data-i18n="opt.corporate">Kurumsal Etkinlik</option>
+            <option data-i18n="opt.fair">Fuar / Festival</option>
+            <option data-i18n="opt.restaurant">Restoran / Mekan</option>
+            <option data-i18n="opt.private">Özel Davet</option>
+            <option data-i18n="opt.other">Diğer</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-pkg" data-i18n="bk.f_pkg">Paket (opsiyonel)</label>
+          <select id="f-pkg" name="package">
+            <option value="" data-i18n="bk.f_pkg_none">Henüz emin değilim</option>
+            <option value="Akustik">Akustik — €500+</option>
+            <option value="Düğün Klasik">Düğün Klasik — €1.250+</option>
+            <option value="Düğün Premium">Düğün Premium — €2.500+</option>
+            <option value="Fuar & Festival">Fuar &amp; Festival — €4.000+</option>
+          </select>
+        </div>
       </div>
-      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" rows="3" placeholder="Tell us about your event..."></textarea></div>
-      <button type="submit" class="btn btn-accent">Send Booking Request →</button>
-      <p class="form-note">Opens WhatsApp with your request pre-filled — no account needed.</p>
+      <div class="field"><label for="f-msg" data-i18n="bk.f_msg">Mesaj</label><textarea id="f-msg" name="message" rows="3" data-i18n-attr="placeholder:bk.f_msg_ph" placeholder="Etkinliğini anlat..."></textarea></div>
+      <button type="submit" class="btn btn-accent btn-block"><span data-i18n="bk.submit">Rezervasyon Talebi Gönder</span><svg class="icon"><use href="#i-send"/></svg></button>
+      <div class="form-status" role="status"></div>
+      <p class="form-note" data-i18n="bk.note">Bilgilerin güvenli şekilde e-posta ile iletilir — iznin olmadan asla paylaşılmaz.</p>
+    </form>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" style="padding:70px 0">
+  <div class="container nl-inner">
+    <div>
+      <h3 data-i18n="nl.title">Takipte kal</h3>
+      <p data-i18n="nl.sub">Yeni performanslar, tarihler ve Avrupa şehir çekimleri — spam yok.</p>
+    </div>
+    <form class="nl-form" id="newsletterForm">
+      <input type="email" name="email" data-i18n-attr="placeholder:nl.ph" placeholder="E-posta adresin" required>
+      <button type="submit" class="btn btn-accent"><span data-i18n="nl.btn">Abone ol</span></button>
+      <p class="nl-status" data-i18n="nl.ok">Teşekkürler — listedesin.</p>
     </form>
   </div>
 </section>
@@ -426,37 +485,73 @@ footer{background:#070B16;padding:60px 0 40px;color:rgba(255,255,255,.5)}
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
-      <a href="#" class="logo">Bilalive <em>Music</em></a>
-      <div class="socials">
-        <a href="https://www.instagram.com/bilalivemusic" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
-        <a href="https://www.tiktok.com/@bilalivemusic" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
-        <a href="https://www.youtube.com/@bilalivemusic" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
-        <a href="https://wa.me/0000000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-        <a href="mailto:info@bilalivemusic.com" aria-label="Email">✉️</a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><svg class="icon"><use href="#i-music"/></svg>Bilalive <em>Music</em></a>
+        <p data-i18n="ft.tag">Avrupa genelinde premium canlı müzik. Türkiye'den bir ses.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/nefessal/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-ig"/></svg></a>
+          <a href="https://www.youtube.com/@NefessAl" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-yt"/></svg></a>
+          <a href="https://www.tiktok.com/@bilalivemusic" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon"><use href="#i-tiktok"/></svg></a>
+          <a href="mailto:info@bilalivemusic.com" aria-label="E-posta"><svg class="icon"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="ft.explore">Keşfet</h5>
+        <a href="about.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="index.html#performances" data-i18n="nav.performances">Performanslar</a>
+        <a href="index.html#packages" data-i18n="nav.packages">Paketler</a>
+        <a href="contact.html" data-i18n="nav.contact">İletişim</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="ft.legal">Yasal</h5>
+        <a href="privacy.html" data-i18n="ft.privacy">Gizlilik Politikası</a>
+        <a href="cookies.html" data-i18n="ft.cookies">Çerez Politikası</a>
+        <a href="terms.html" data-i18n="ft.terms">Kullanım Koşulları</a>
+        <a href="#" data-cookie-settings data-i18n="ck.customize">Çerez tercihlerim</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Bilalive Music. All rights reserved.</span>
+      <span>© <span data-year>2026</span> Bilalive Music. <span data-i18n="ft.rights">Tüm hakları saklıdır.</span> <span data-i18n="ft.brand">Bir WeIntensify B.V. markasıdır.</span></span>
       <span>One Voice. One Guitar. One Unforgettable Experience.</span>
     </div>
   </div>
 </footer>
 
+<!-- COOKIE CONSENT -->
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Çerez tercihleri">
+  <h4><svg class="icon"><use href="#i-cookie"/></svg><span data-i18n="ck.title">Gizliliğine değer veriyoruz</span></h4>
+  <p><span data-i18n="ck.body">Temel işlevler için çerez kullanıyoruz; istatistik ve pazarlama çerezlerini yalnızca onayınla açıyoruz. Detaylar:</span> <a href="cookies.html" data-i18n="ft.cookies">Çerez Politikası</a></p>
+  <div class="cookie-prefs" id="cookiePrefs">
+    <div class="pref">
+      <div><b data-i18n="ck.c_func">Zorunlu</b><small data-i18n="ck.c_func_d">Sitenin çalışması için gerekli (dil, güvenlik). Her zaman açık.</small></div>
+      <label class="switch"><input type="checkbox" checked disabled><span class="track"></span></label>
+    </div>
+    <div class="pref">
+      <div><b data-i18n="ck.c_stat">İstatistik</b><small data-i18n="ck.c_stat_d">Siteyi geliştirmek için anonim kullanım ölçümü.</small></div>
+      <label class="switch"><input type="checkbox" id="ckStat"><span class="track"></span></label>
+    </div>
+    <div class="pref">
+      <div><b data-i18n="ck.c_mkt">Pazarlama</b><small data-i18n="ck.c_mkt_d">Gömülü medya ve kampanya ölçümü.</small></div>
+      <label class="switch"><input type="checkbox" id="ckMkt"><span class="track"></span></label>
+    </div>
+    <button class="btn btn-accent btn-block" id="ckSave" type="button" data-i18n="ck.save">Seçimleri kaydet</button>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-accent" id="ckAccept" type="button" data-i18n="ck.accept">Tümünü kabul et</button>
+    <button class="btn btn-ghost" id="ckReject" type="button" data-i18n="ck.reject">Zorunlu dışını reddet</button>
+    <button class="btn-text" id="ckCustomize" type="button" data-i18n="ck.customize">Özelleştir</button>
+  </div>
+</div>
+
 <script>
-// nav scroll state
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
-// reveal on scroll
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-// booking → WhatsApp prefill
-document.getElementById('bookingForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const v=id=>document.getElementById(id).value;
-  const msg=`Hi! I'd like to book Bilalive Music 🎸%0A%0AName: ${encodeURIComponent(v('f-name'))}%0APhone: ${encodeURIComponent(v('f-phone'))}%0ADate: ${encodeURIComponent(v('f-date'))}%0ACity: ${encodeURIComponent(v('f-city'))}%0AEvent: ${encodeURIComponent(v('f-type'))}%0A%0A${encodeURIComponent(v('f-msg'))}`;
-  window.open(`https://wa.me/0000000000?text=${msg}`,'_blank');
-});
+window.BLM_CONFIG = {
+  web3formsKey: "YOUR_WEB3FORMS_ACCESS_KEY", /* web3forms.com — access key gelince değiştir */
+  gaId: "",                                   /* örn. "G-XXXXXXX" — onaya bağlı yüklenir */
+  email: "info@bilalivemusic.com"
+};
 </script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
