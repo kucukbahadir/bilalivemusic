@@ -114,18 +114,17 @@
     });
   });
 
-  /* ---------- VIDEO click-to-load (privacy: no YT cookies until user plays) ---------- */
+  /* ---------- VIDEO: open on YouTube in a new tab ----------
+     Inline embeds (Error 153) break inside in-app browsers such as Instagram's,
+     which is exactly where our traffic comes from. Opening the real YouTube page
+     works everywhere, launches the YouTube app on mobile, and loads no YT code
+     until the user clicks (GDPR-friendly). */
   $$("[data-video]").forEach(function (card) {
-    card.addEventListener("click", function () {
-      if (card.querySelector("iframe")) return;
-      var id = card.getAttribute("data-video");
-      var ifr = document.createElement("iframe");
-      ifr.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-      ifr.setAttribute("allowfullscreen", "");
-      ifr.setAttribute("title", card.getAttribute("aria-label") || "Video");
-      ifr.style.cssText = "position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5";
-      ifr.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
-      card.appendChild(ifr);
+    var id = card.getAttribute("data-video");
+    var open = function () { window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); };
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
     });
   });
 
