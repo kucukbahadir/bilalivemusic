@@ -182,7 +182,7 @@
   }
 
   /* ---------- BOOKING FORM -> Web3Forms (email only; NEVER to WhatsApp) ---------- */
-  function wireForm(form, subject) {
+  function wireForm(form, subject, formType) {
     if (!form) return;
     var statusEl = form.querySelector(".form-status");
     var btn = form.querySelector('button[type="submit"]');
@@ -194,6 +194,7 @@
       fd.append("access_key", W3F_KEY);
       fd.append("subject", subject + " — Bilalive Music");
       fd.append("from_name", "Bilalive Music Website");
+      fd.append("form_type", formType || "general"); // inbox filtering: booking / contact / newsletter
       // honeypot
       if (fd.get("botcheck")) return;
       var origText = btn ? btn.textContent : "";
@@ -217,8 +218,8 @@
     var el = document.querySelector('[data-i18n="' + key + '"]');
     return el ? el.textContent : fallback;
   }
-  wireForm($("#bookingForm"), "New booking request");
-  wireForm($("#contactForm"), "New contact message");
+  wireForm($("#bookingForm"), "Yeni Rezervasyon Talebi", "booking");
+  wireForm($("#contactForm"), "Yeni İletişim Mesajı", "contact");
 
   /* ---------- NEWSLETTER -> Web3Forms (captured now; connect Brevo later) ---------- */
   var nlForm = $("#newsletterForm");
@@ -228,8 +229,9 @@
       e.preventDefault();
       var fd = new FormData(nlForm);
       fd.append("access_key", W3F_KEY);
-      fd.append("subject", "Newsletter signup — Bilalive Music");
+      fd.append("subject", "Yeni Bülten Kaydı — Bilalive Music");
       fd.append("from_name", "Bilalive Music Newsletter");
+      fd.append("form_type", "newsletter");
       fetch("https://api.web3forms.com/submit", { method: "POST", headers: { Accept: "application/json" }, body: fd })
         .then(function (r) { return r.json(); }).then(function (d) {
           nlForm.reset();
