@@ -214,7 +214,8 @@
     });
   }
   function tKey(key, fallback) {
-    // pull a translated string via a hidden helper element if present
+    // translate in the current language via the i18n engine
+    if (window.BLM_I18N && window.BLM_I18N.t) return window.BLM_I18N.t(key, fallback);
     var el = document.querySelector('[data-i18n="' + key + '"]');
     return el ? el.textContent : fallback;
   }

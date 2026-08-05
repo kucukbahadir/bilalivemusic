@@ -193,6 +193,13 @@
       "ck.title": "Nous respectons votre vie privée", "ck.body": "Nous utilisons des cookies pour les fonctions essentielles et — uniquement avec votre consentement — pour les statistiques et le marketing. Voir notre",
       "ck.accept": "Tout accepter", "ck.reject": "Refuser non essentiels", "ck.customize": "Personnaliser", "ck.save": "Enregistrer",
       "ck.c_func": "Fonctionnel", "ck.c_stat": "Statistiques", "ck.c_mkt": "Marketing", "pg.home": "Accueil"
+    },
+    tr: {
+      /* runtime-only strings that have no in-HTML element, so Turkish must live here */
+      "bk.ok": "Teşekkürler. Talebin gönderildi — kısa süre içinde e-posta ile döneceğiz.",
+      "bk.err": "Bir şeyler ters gitti. Lütfen doğrudan info@bilalivemusic.com adresine yaz.",
+      "bk.sending": "Gönderiliyor...",
+      "nl.ok": "Teşekkürler — listedesin."
     }
   };
 
@@ -212,11 +219,16 @@
   }
 
   function tr(lang, key) {
-    if (lang === "tr") return ORIG[key];
+    if (lang === "tr") {
+      if (ORIG[key] != null) return ORIG[key];       // Turkish from the HTML
+      if (DICT.tr[key] != null) return DICT.tr[key];  // runtime-only Turkish strings
+      return undefined;
+    }
     var d = DICT[lang];
     if (d && d[key] != null) return d[key];
     if (DICT.en[key] != null) return DICT.en[key];
-    return ORIG[key]; // ultimate fallback: Turkish
+    if (DICT.tr[key] != null) return DICT.tr[key];
+    return ORIG[key]; // ultimate fallback: Turkish from the HTML
   }
 
   function apply(lang) {
@@ -258,7 +270,12 @@
   window.BLM_I18N = {
     supported: SUPPORTED, names: NAMES, codes: CODES,
     current: function () { return document.documentElement.getAttribute("lang") || "tr"; },
-    set: apply, detect: detect
+    set: apply, detect: detect,
+    // translate an arbitrary key in the CURRENT language (for runtime messages)
+    t: function (key, fallback) {
+      var v = tr(this.current(), key);
+      return v == null ? fallback : v;
+    }
   };
 
   // apply as early as possible
