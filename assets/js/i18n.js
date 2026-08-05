@@ -260,7 +260,7 @@
     document.querySelectorAll("[data-lang-code]").forEach(function (n) {
       n.textContent = CODES[lang];
     });
-    document.querySelectorAll(".lang-menu button").forEach(function (b) {
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-set-lang") === lang);
     });
     try { localStorage.setItem("blm_lang", lang); } catch (e) {}

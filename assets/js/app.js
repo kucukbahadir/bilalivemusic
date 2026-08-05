@@ -22,7 +22,28 @@
   }
   // mobile menu
   var burger = $("#burger"), mobileMenu = $("#mobileMenu");
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove("open");
+    if (burger) burger.classList.remove("open");
+    document.body.style.overflow = "";
+  }
   if (burger && mobileMenu) {
+    // inject a language chooser into the mobile menu (header stays logo + burger only on mobile)
+    if (window.BLM_I18N && !$(".mm-lang", mobileMenu)) {
+      var mm = document.createElement("div");
+      mm.className = "mm-lang";
+      var cur = window.BLM_I18N.current();
+      window.BLM_I18N.supported.forEach(function (code) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("data-set-lang", code);
+        b.textContent = window.BLM_I18N.codes[code];
+        if (code === cur) b.classList.add("active");
+        mm.appendChild(b);
+      });
+      mobileMenu.appendChild(mm);
+    }
     burger.addEventListener("click", function () {
       var open = mobileMenu.classList.toggle("open");
       burger.classList.toggle("open", open);
@@ -30,10 +51,7 @@
       document.body.style.overflow = open ? "hidden" : "";
     });
     $$("a", mobileMenu).forEach(function (a) {
-      a.addEventListener("click", function () {
-        mobileMenu.classList.remove("open"); burger.classList.remove("open");
-        document.body.style.overflow = "";
-      });
+      a.addEventListener("click", closeMobileMenu);
     });
   }
 
@@ -53,11 +71,13 @@
     });
   });
   document.addEventListener("click", function () { $$(".lang.open").forEach(function (w) { w.classList.remove("open"); }); });
-  $$("[data-set-lang]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      if (window.BLM_I18N) window.BLM_I18N.set(b.getAttribute("data-set-lang"));
-      $$(".lang.open").forEach(function (w) { w.classList.remove("open"); });
-    });
+  // delegation so dynamically-injected mobile-menu language buttons work too
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-set-lang]") : null;
+    if (!b) return;
+    if (window.BLM_I18N) window.BLM_I18N.set(b.getAttribute("data-set-lang"));
+    $$(".lang.open").forEach(function (w) { w.classList.remove("open"); });
+    closeMobileMenu();
   });
 
   /* ---------- COOKIE CONSENT ---------- */
