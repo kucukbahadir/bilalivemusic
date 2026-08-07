@@ -45,7 +45,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s va
 nav.solid,nav.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#fff;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:9px}
-.logo .icon{width:22px;height:22px;color:var(--gold)}
+.logo .icon{width:28px;height:28px;color:var(--gold);transform:rotate(32deg)}
 .logo em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--gold)}
 /* wordmark pun: Bilal + live — the "live" syllable in accent + a soft on-air pulse dot */
 .logo .lg-live{color:var(--accent);position:relative;padding-right:9px}
