@@ -101,19 +101,19 @@ nav.solid,nav.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(18px);
 @keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(.8deg)}}
 /* ---- performance FX: strings strummed + pluck sparks + notes drifting up ---- */
 .guitar-svg .strings line{animation:pluck 6.6s ease-in-out infinite}
-.guitar-svg .plucks circle{opacity:0;animation:pluckflash 6.6s ease-out infinite;filter:drop-shadow(0 0 5px rgba(255,222,150,.95))}
+.guitar-svg .plucks circle{opacity:0;animation:pluckflash 6.6s ease-out infinite;filter:drop-shadow(0 0 8px rgba(255,226,160,1))}
 .guitar-svg .s1,.guitar-svg .p1{animation-delay:0s}
 .guitar-svg .s2,.guitar-svg .p2{animation-delay:.5s}
 .guitar-svg .s3,.guitar-svg .p3{animation-delay:1s}
 .guitar-svg .s4,.guitar-svg .p4{animation-delay:1.5s}
 .guitar-svg .s5,.guitar-svg .p5{animation-delay:2s}
 .guitar-svg .s6,.guitar-svg .p6{animation-delay:2.5s}
-@keyframes pluck{0%,48%,100%{transform:translateX(0)}1%{transform:translateX(3px)}3%{transform:translateX(-2.4px)}5%{transform:translateX(1.5px)}7%{transform:translateX(-.8px)}9%{transform:translateX(.35px)}11%{transform:translateX(0)}}
-@keyframes pluckflash{0%,9%,100%{opacity:0;transform:scale(.4)}1.4%{opacity:.95;transform:scale(1.6)}5%{opacity:0;transform:scale(.7)}}
+@keyframes pluck{0%,48%,100%{transform:translateX(0)}1%{transform:translateX(4px)}3%{transform:translateX(-3.2px)}5%{transform:translateX(2px)}7%{transform:translateX(-1.1px)}9%{transform:translateX(.5px)}11%{transform:translateX(0)}}
+@keyframes pluckflash{0%,9%,100%{opacity:0;transform:scale(.4)}1.4%{opacity:1;transform:scale(1.9)}5%{opacity:0;transform:scale(.8)}}
 .note-field{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:3}
-.note-field .n{position:absolute;top:58%;width:var(--sz,16px);height:var(--sz,16px);color:var(--gold);opacity:0;animation:riseNote var(--dur,7s) ease-in infinite;animation-delay:var(--dl,0s);filter:drop-shadow(0 0 6px rgba(217,164,65,.5))}
-.note-field .n.coral{color:var(--accent);filter:drop-shadow(0 0 6px rgba(255,90,78,.45))}
-@keyframes riseNote{0%{opacity:0;transform:translate(-50%,0) scale(.5) rotate(0deg)}14%{opacity:.9}68%{opacity:.5}100%{opacity:0;transform:translate(calc(-50% + var(--dx,0px)),-300px) scale(1.15) rotate(var(--rot,15deg))}}
+.note-field .n{position:absolute;top:58%;width:var(--sz,16px);height:var(--sz,16px);color:var(--gold);opacity:0;animation:riseNote var(--dur,7s) ease-in infinite;animation-delay:var(--dl,0s);filter:drop-shadow(0 0 9px rgba(217,164,65,.8))}
+.note-field .n.coral{color:var(--accent);filter:drop-shadow(0 0 9px rgba(255,90,78,.7))}
+@keyframes riseNote{0%{opacity:0;transform:translate(-50%,0) scale(.5) rotate(0deg)}12%{opacity:1}72%{opacity:.85}100%{opacity:0;transform:translate(calc(-50% + var(--dx,0px)),-320px) scale(1.2) rotate(var(--rot,15deg))}}
 .sound-ring{position:absolute;border:1px solid rgba(217,164,65,.25);border-radius:50%;animation:ring 4.5s var(--ease) infinite}
 .sound-ring:nth-child(2){animation-delay:1.5s}
 .sound-ring:nth-child(3){animation-delay:3s}
