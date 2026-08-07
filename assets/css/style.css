@@ -100,14 +100,6 @@ nav.solid,nav.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(18px);
 .guitar-svg{position:relative;width:min(420px,80vw);height:auto;filter:drop-shadow(0 32px 64px rgba(0,0,0,.55));animation:float 7s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(.8deg)}}
 /* ---- performance FX: strings strummed + pluck sparks + notes drifting up ---- */
-.guitar-svg .plucks circle{opacity:0;animation:pluckflash 6.6s ease-out infinite;filter:drop-shadow(0 0 8px rgba(255,226,160,1))}
-.guitar-svg .s1,.guitar-svg .p1{animation-delay:0s}
-.guitar-svg .s2,.guitar-svg .p2{animation-delay:.5s}
-.guitar-svg .s3,.guitar-svg .p3{animation-delay:1s}
-.guitar-svg .s4,.guitar-svg .p4{animation-delay:1.5s}
-.guitar-svg .s5,.guitar-svg .p5{animation-delay:2s}
-.guitar-svg .s6,.guitar-svg .p6{animation-delay:2.5s}
-@keyframes pluckflash{0%,9%,100%{opacity:0;transform:scale(.4)}1.4%{opacity:1;transform:scale(1.9)}5%{opacity:0;transform:scale(.8)}}
 .note-field{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:3}
 .note-field .n{position:absolute;top:58%;width:var(--sz,16px);height:var(--sz,16px);color:var(--gold);opacity:0;animation:riseNote var(--dur,7s) ease-in infinite;animation-delay:var(--dl,0s);filter:drop-shadow(0 0 9px rgba(217,164,65,.8))}
 .note-field .n.coral{color:var(--accent);filter:drop-shadow(0 0 9px rgba(255,90,78,.7))}
