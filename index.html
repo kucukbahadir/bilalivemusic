@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D9A441' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.9 2.4h4.2v2h-4.2z'/%3E%3Cpath d='M12 4.4v6.8'/%3E%3Cpath d='M12 11.2c-2.1 0-3.3 1.4-3.3 3 0 .9.4 1.5.4 2.2 0 .9-1.5 1.6-1.5 3.5 0 2 2 3.1 4.4 3.1s4.4-1.1 4.4-3.1c0-1.9-1.5-2.6-1.5-3.5 0-.7.4-1.3.4-2.2 0-1.6-1.2-3-3.3-3z'/%3E%3Ccircle cx='12' cy='18' r='1.7'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
@@ -36,6 +36,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
   <symbol id="i-guitar" viewBox="0 0 24 24"><path d="M9.9 2.4h4.2v2h-4.2z"/><path d="M12 4.4v6.8"/><path d="M12 11.2c-2.1 0-3.3 1.4-3.3 3 0 .9.4 1.5.4 2.2 0 .9-1.5 1.6-1.5 3.5 0 2 2 3.1 4.4 3.1s4.4-1.1 4.4-3.1c0-1.9-1.5-2.6-1.5-3.5 0-.7.4-1.3.4-2.2 0-1.6-1.2-3-3.3-3z"/><circle cx="12" cy="18" r="1.7"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="currentColor" stroke="none"/><circle cx="18" cy="16" r="3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-note1" viewBox="0 0 24 24"><path d="M10 17V4l7-1.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="17" r="3" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
@@ -60,7 +62,7 @@
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/img/guitar-gold.svg?v=6" class="logo-mark" alt="" width="30" height="46"><span class="wm">Bila<span class="lg-live">live</span> <em>Music</em></span></a>
+    <a href="index.html" class="logo"><img src="assets/img/guitar-gold.svg?v=7" class="logo-mark" alt="" width="30" height="46"><span class="wm">Bila<span class="lg-live">live</span> <em>Music</em></span></a>
     <div class="nav-links">
       <a href="about.html" data-i18n="nav.about">Hakkımızda</a>
       <a href="#performances" data-i18n="nav.performances">Performanslar</a>
@@ -150,10 +152,15 @@
         <circle cx="210" cy="470" r="52" fill="none" stroke="url(#rimG)" stroke-width="3"/>
         <circle cx="210" cy="470" r="60" fill="none" stroke="#D9A441" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 6"/>
         <rect x="164" y="556" width="92" height="18" rx="9" fill="#1E2743" stroke="#D9A441" stroke-opacity=".5" stroke-width="1.5"/>
-        <g stroke="url(#strG)" stroke-width="1.3" opacity=".95">
-          <line x1="196" y1="90" x2="176" y2="565"/><line x1="201.5" y1="90" x2="189.5" y2="565"/>
-          <line x1="207" y1="90" x2="203" y2="565"/><line x1="213" y1="90" x2="217" y2="565"/>
-          <line x1="218.5" y1="90" x2="230.5" y2="565"/><line x1="224" y1="90" x2="244" y2="565"/>
+        <g class="strings" stroke="url(#strG)" stroke-width="1.3" opacity=".95">
+          <line class="s1" x1="196" y1="90" x2="176" y2="565"/><line class="s2" x1="201.5" y1="90" x2="189.5" y2="565"/>
+          <line class="s3" x1="207" y1="90" x2="203" y2="565"/><line class="s4" x1="213" y1="90" x2="217" y2="565"/>
+          <line class="s5" x1="218.5" y1="90" x2="230.5" y2="565"/><line class="s6" x1="224" y1="90" x2="244" y2="565"/>
+        </g>
+        <g class="plucks" fill="#FFF3D6">
+          <circle class="p1" cx="179.2" cy="492" r="3.2"/><circle class="p2" cx="191.4" cy="492" r="3.2"/>
+          <circle class="p3" cx="203.6" cy="492" r="3.2"/><circle class="p4" cx="216.4" cy="492" r="3.2"/>
+          <circle class="p5" cx="228.6" cy="492" r="3.2"/><circle class="p6" cx="240.8" cy="492" r="3.2"/>
         </g>
         <g fill="#D9A441">
           <circle cx="176" cy="565" r="2.6"/><circle cx="189.5" cy="565" r="2.6"/><circle cx="203" cy="565" r="2.6"/>
@@ -161,6 +168,15 @@
         </g>
         <path d="M150 380 Q 210 350 280 385 L 268 402 Q 210 372 160 396 Z" fill="#fff" opacity=".05"/>
       </svg>
+      <div class="note-field" aria-hidden="true">
+        <svg class="n" style="left:47%;--dl:.2s;--dur:6.4s;--dx:-36px;--rot:-16deg;--sz:19px" viewBox="0 0 24 24"><use href="#i-note"/></svg>
+        <svg class="n" style="left:52%;--dl:1.7s;--dur:7.3s;--dx:30px;--rot:16deg;--sz:14px" viewBox="0 0 24 24"><use href="#i-note1"/></svg>
+        <svg class="n coral" style="left:50%;--dl:3s;--dur:6.9s;--dx:-14px;--rot:-10deg;--sz:16px" viewBox="0 0 24 24"><use href="#i-note"/></svg>
+        <svg class="n" style="left:44%;--dl:4.3s;--dur:7.7s;--dx:-52px;--rot:-24deg;--sz:13px" viewBox="0 0 24 24"><use href="#i-note1"/></svg>
+        <svg class="n" style="left:54%;--dl:2.4s;--dur:7s;--dx:44px;--rot:22deg;--sz:18px" viewBox="0 0 24 24"><use href="#i-note"/></svg>
+        <svg class="n coral" style="left:49%;--dl:5.5s;--dur:7.2s;--dx:12px;--rot:8deg;--sz:14px" viewBox="0 0 24 24"><use href="#i-note1"/></svg>
+        <svg class="n" style="left:51%;--dl:1s;--dur:8.1s;--dx:24px;--rot:12deg;--sz:12px" viewBox="0 0 24 24"><use href="#i-note"/></svg>
+      </div>
     </div>
   </div>
 </header>
@@ -489,7 +505,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="assets/img/guitar-gold.svg?v=6" class="logo-mark" alt="" width="30" height="46"><span class="wm">Bila<span class="lg-live">live</span> <em>Music</em></span></a>
+        <a href="index.html" class="logo"><img src="assets/img/guitar-gold.svg?v=7" class="logo-mark" alt="" width="30" height="46"><span class="wm">Bila<span class="lg-live">live</span> <em>Music</em></span></a>
         <p data-i18n="ft.tag">Avrupa genelinde premium canlı müzik. Türkiye'den bir ses.</p>
         <div class="socials">
           <a href="https://www.instagram.com/nefessal/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-ig"/></svg></a>
@@ -553,7 +569,7 @@ window.BLM_CONFIG = {
   email: "info@bilalivemusic.com"
 };
 </script>
-<script src="assets/js/i18n.js?v=6"></script>
-<script src="assets/js/app.js?v=6"></script>
+<script src="assets/js/i18n.js?v=7"></script>
+<script src="assets/js/app.js?v=7"></script>
 </body>
 </html>
