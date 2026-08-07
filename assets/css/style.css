@@ -47,6 +47,11 @@ nav.solid,nav.scrolled{background:rgba(11,16,32,.82);backdrop-filter:blur(18px);
 .logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#fff;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:9px}
 .logo .icon{width:22px;height:22px;color:var(--gold)}
 .logo em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--gold)}
+/* wordmark pun: Bilal + live — the "live" syllable in accent + a soft on-air pulse dot */
+.logo .lg-live{color:var(--accent);position:relative;padding-right:9px}
+.logo .lg-live::after{content:"";position:absolute;right:0;top:50%;width:5px;height:5px;margin-top:-4px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(255,90,78,.55);animation:onair 2.2s ease-out infinite}
+@keyframes onair{0%{box-shadow:0 0 0 0 rgba(255,90,78,.55)}70%{box-shadow:0 0 0 6px rgba(255,90,78,0)}100%{box-shadow:0 0 0 0 rgba(255,90,78,0)}}
+@media(prefers-reduced-motion:reduce){.logo .lg-live::after{animation:none}}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a:not(.btn){color:rgba(255,255,255,.72);font-size:14.5px;font-weight:500;transition:color .25s}
 .nav-links a:not(.btn):hover{color:#fff}
