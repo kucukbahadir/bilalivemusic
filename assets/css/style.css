@@ -158,7 +158,8 @@ section{padding:110px 0}
 .video-card.tall .label{z-index:2}
 .side-portrait{width:100%;border-radius:var(--r-sm);margin-bottom:20px;box-shadow:var(--shadow-soft)}
 /* floating WhatsApp chat widget */
-.wa-widget{position:fixed;left:22px;bottom:22px;z-index:95;display:flex;flex-direction:column;align-items:flex-start;gap:14px;transition:opacity .3s,transform .3s,visibility .3s}
+.wa-widget{position:fixed;left:22px;bottom:22px;z-index:95;display:flex;flex-direction:column;align-items:flex-start;gap:14px;transition:opacity .3s,transform .3s,visibility .3s;pointer-events:none}
+.wa-fab,.wa-panel{pointer-events:auto}
 .wa-widget.hidden{opacity:0;visibility:hidden;transform:translateY(14px)}
 .wa-fab{position:relative;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:transform .3s var(--ease),box-shadow .3s}
 .wa-fab:hover{transform:scale(1.08);box-shadow:0 14px 32px rgba(37,211,102,.5)}
