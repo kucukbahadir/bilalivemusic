@@ -14,6 +14,10 @@
 
   var DICT = {
     en: {
+      "wa.online": "Online",
+      "wa.greet": "Hi! How can we help? Looking for live music for your event? Message us and we'll reply right away.",
+      "wa.cta": "Start chat",
+      "wa.msg": "Hi! I'd like some info about Bilalive Music.",
       "ab.h1a": "15 years on stage.",
       "ab.h1b": "Now it's Europe's turn.",
       "ab.sub": "A guitar, a voice and a passion for bringing people together through music. This is Bilal Yılmaz's story.",
@@ -134,6 +138,10 @@
       "pg.home": "Home"
     },
     de: {
+      "wa.online": "Online",
+      "wa.greet": "Hallo! Wie können wir helfen? Suchen Sie Live-Musik für Ihr Event? Schreiben Sie uns, wir antworten sofort.",
+      "wa.cta": "Chat starten",
+      "wa.msg": "Hallo! Ich hätte gern Infos zu Bilalive Music.",
       "ab.h1a": "15 Jahre auf der Bühne.",
       "ab.h1b": "Jetzt ist Europa an der Reihe.",
       "ab.sub": "Eine Gitarre, eine Stimme und die Leidenschaft, Menschen durch Musik zu verbinden. Das ist die Geschichte von Bilal Yılmaz.",
@@ -253,6 +261,10 @@
       "ck.c_func": "Funktional", "ck.c_stat": "Statistik", "ck.c_mkt": "Marketing", "pg.home": "Start"
     },
     nl: {
+      "wa.online": "Online",
+      "wa.greet": "Hoi! Hoe kunnen we helpen? Op zoek naar livemuziek voor je evenement? Stuur een bericht, we reageren snel.",
+      "wa.cta": "Chat starten",
+      "wa.msg": "Hoi! Ik wil graag info over Bilalive Music.",
       "ab.h1a": "15 jaar op het podium.",
       "ab.h1b": "Nu is Europa aan de beurt.",
       "ab.sub": "Een gitaar, een stem en de passie om mensen samen te brengen met muziek. Dit is het verhaal van Bilal Yılmaz.",
@@ -372,6 +384,10 @@
       "ck.c_func": "Functioneel", "ck.c_stat": "Statistiek", "ck.c_mkt": "Marketing", "pg.home": "Home"
     },
     fr: {
+      "wa.online": "En ligne",
+      "wa.greet": "Bonjour ! Comment pouvons-nous aider ? Vous cherchez de la musique live pour votre événement ? Écrivez-nous, réponse rapide.",
+      "wa.cta": "Démarrer le chat",
+      "wa.msg": "Bonjour ! Je souhaite des infos sur Bilalive Music.",
       "ab.h1a": "15 ans sur scène.",
       "ab.h1b": "C'est au tour de l'Europe.",
       "ab.sub": "Une guitare, une voix et la passion de réunir les gens par la musique. Voici l'histoire de Bilal Yılmaz.",
@@ -491,6 +507,11 @@
       "ck.c_func": "Fonctionnel", "ck.c_stat": "Statistiques", "ck.c_mkt": "Marketing", "pg.home": "Accueil"
     },
     tr: {
+      "wa.name": "Bilalive Music",
+      "wa.online": "Çevrimiçi",
+      "wa.greet": "Merhaba! Size nasıl yardımcı olabiliriz? Etkinliğiniz için canlı müzik mi arıyorsunuz? Yazın, hemen dönelim.",
+      "wa.cta": "Sohbeti başlat",
+      "wa.msg": "Merhaba! Bilalive Music hakkında bilgi almak istiyorum.",
       /* runtime-only strings that have no in-HTML element, so Turkish must live here */
       "bk.ok": "Teşekkürler. Talebin gönderildi — kısa süre içinde e-posta ile döneceğiz.",
       "bk.err": "Bir şeyler ters gitti. Lütfen doğrudan info@bilalivemusic.com adresine yaz.",

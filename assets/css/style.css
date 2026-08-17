@@ -157,15 +157,37 @@ section{padding:110px 0}
 .video-card.tall::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,11,22,.72),transparent 45%)}
 .video-card.tall .label{z-index:2}
 .side-portrait{width:100%;border-radius:var(--r-sm);margin-bottom:20px;box-shadow:var(--shadow-soft)}
-/* floating WhatsApp button */
-.wa-fab{position:fixed;left:22px;bottom:22px;z-index:95;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:transform .3s var(--ease),box-shadow .3s,opacity .3s}
-.wa-fab svg{width:32px;height:32px}
+/* floating WhatsApp chat widget */
+.wa-widget{position:fixed;left:22px;bottom:22px;z-index:95;display:flex;flex-direction:column;align-items:flex-start;gap:14px;transition:opacity .3s,transform .3s,visibility .3s}
+.wa-widget.hidden{opacity:0;visibility:hidden;transform:translateY(14px)}
+.wa-fab{position:relative;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:transform .3s var(--ease),box-shadow .3s}
 .wa-fab:hover{transform:scale(1.08);box-shadow:0 14px 32px rgba(37,211,102,.5)}
+.wa-fab .wa-ic,.wa-fab .wa-x{position:absolute;display:flex;align-items:center;justify-content:center;transition:opacity .28s var(--ease),transform .28s var(--ease)}
+.wa-fab .wa-ic svg{width:32px;height:32px}
+.wa-fab .wa-x{font-size:30px;line-height:1;opacity:0;transform:rotate(-90deg) scale(.6)}
+.wa-widget.open .wa-fab .wa-ic{opacity:0;transform:rotate(90deg) scale(.6)}
+.wa-widget.open .wa-fab .wa-x{opacity:1;transform:none}
 .wa-fab::before{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(37,211,102,.55);animation:waPulse 2.6s ease-out infinite}
-.wa-fab.hidden{opacity:0;visibility:hidden;transform:translateY(12px)}
-@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-@media(prefers-reduced-motion:reduce){.wa-fab::before{animation:none}}
-@media(max-width:560px){.wa-fab{width:52px;height:52px;left:16px;bottom:16px}.wa-fab svg{width:29px;height:29px}}
+.wa-widget.open .wa-fab::before{animation:none}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wa-panel{order:-1;width:300px;max-width:78vw;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 22px 54px rgba(0,0,0,.3);transform-origin:bottom left;opacity:0;visibility:hidden;transform:translateY(16px) scale(.92);transition:opacity .28s var(--ease),transform .34s var(--ease),visibility .28s}
+.wa-widget.open .wa-panel{opacity:1;visibility:visible;transform:none}
+.wa-head{background:#075E54;color:#fff;padding:13px 15px;display:flex;align-items:center;gap:11px}
+.wa-ava{width:40px;height:40px;border-radius:50%;background:#128C7E;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.wa-ava svg{width:22px;height:22px}
+.wa-id b{display:block;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;line-height:1.15}
+.wa-id small{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.82);font-size:12px;margin-top:1px}
+.wa-id small::before{content:"";width:7px;height:7px;border-radius:50%;background:#4ade80}
+.wa-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.wa-msgs{background:#E6DDD4;padding:22px 16px 18px}
+.wa-bubble{background:#fff;border-radius:3px 14px 14px 14px;padding:12px 14px;font-size:14px;line-height:1.5;color:#1a1a1a;box-shadow:0 1px 1px rgba(0,0,0,.1);max-width:92%;opacity:0}
+.wa-widget.open .wa-bubble{animation:waBubble .5s var(--ease) .18s forwards}
+@keyframes waBubble{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.wa-cta{display:flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#fff;text-decoration:none;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:14px;transition:background .2s}
+.wa-cta:hover{background:#1fbb59}
+.wa-cta svg{width:20px;height:20px}
+@media(prefers-reduced-motion:reduce){.wa-fab::before{animation:none}.wa-widget.open .wa-bubble{animation:none;opacity:1}}
+@media(max-width:560px){.wa-widget{left:16px;bottom:16px}.wa-fab{width:54px;height:54px}.wa-fab .wa-ic svg{width:30px;height:30px}}
 /* cinematic performance band */
 .perf-band{position:relative;display:block;margin-top:52px;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/7;box-shadow:var(--shadow-deep)}
 .perf-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}

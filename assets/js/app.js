@@ -55,18 +55,44 @@
     });
   }
 
-  /* ---------- FLOATING WHATSAPP BUTTON (live questions) ---------- */
+  /* ---------- FLOATING WHATSAPP CHAT WIDGET ---------- */
   var WA_NUMBER = "4915510989673";
-  var waMsg = encodeURIComponent("Merhaba! Bilalive Music hakkında bilgi almak istiyorum.");
-  var fab = document.createElement("a");
-  fab.className = "wa-fab";
-  fab.href = "https://wa.me/" + WA_NUMBER + "?text=" + waMsg;
-  fab.target = "_blank";
-  fab.rel = "noopener";
-  fab.setAttribute("aria-label", "WhatsApp");
-  fab.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.8c2.17 0 4.2.85 5.73 2.38a8.06 8.06 0 0 1 2.38 5.73c0 4.54-3.7 8.23-8.24 8.23-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.23-8.24zm5.8 11.21c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>';
-  document.body.appendChild(fab);
-  window.BLM_FAB = fab;
+  function waT(k, fb) { return (window.BLM_I18N && window.BLM_I18N.t) ? window.BLM_I18N.t(k, fb) : fb; }
+  var WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.8c2.17 0 4.2.85 5.73 2.38a8.06 8.06 0 0 1 2.38 5.73c0 4.54-3.7 8.23-8.24 8.23-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.23-8.24zm5.8 11.21c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>';
+  var waWrap = document.createElement("div");
+  waWrap.className = "wa-widget";
+  waWrap.innerHTML =
+    '<div class="wa-panel" role="dialog" aria-label="WhatsApp">' +
+      '<div class="wa-head">' +
+        '<span class="wa-ava">' + WA_ICON + '</span>' +
+        '<div class="wa-id"><b data-wa="name">Bilalive Music</b><small data-wa="online">Çevrimiçi</small></div>' +
+        '<button class="wa-close" type="button" aria-label="Kapat">&times;</button>' +
+      '</div>' +
+      '<div class="wa-msgs"><div class="wa-bubble" data-wa="greet">Merhaba! Size nasıl yardımcı olabiliriz?</div></div>' +
+      '<a class="wa-cta" target="_blank" rel="noopener">' + WA_ICON + '<span data-wa="cta">Sohbeti başlat</span></a>' +
+    '</div>' +
+    '<button class="wa-fab" type="button" aria-label="WhatsApp"><span class="wa-ic">' + WA_ICON + '</span><span class="wa-x" aria-hidden="true">&times;</span></button>';
+  document.body.appendChild(waWrap);
+  window.BLM_FAB = waWrap;
+
+  var waFab = $(".wa-fab", waWrap), waCta = $(".wa-cta", waWrap), waCloseBtn = $(".wa-close", waWrap);
+  function waTranslate() {
+    $$("[data-wa]", waWrap).forEach(function (el) {
+      el.textContent = waT("wa." + el.getAttribute("data-wa"), el.textContent);
+    });
+    waCta.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(waT("wa.msg", "Merhaba!"));
+  }
+  waTranslate();
+  window.addEventListener("blm:lang", waTranslate);
+  function waOpen(v) {
+    waWrap.classList.toggle("open", v);
+    if (v) { try { sessionStorage.setItem("blm_wa_seen", "1"); } catch (e) {} }
+  }
+  waFab.addEventListener("click", function () { waOpen(!waWrap.classList.contains("open")); });
+  waCloseBtn.addEventListener("click", function () { waOpen(false); });
+  // auto-open once per session to feel like an incoming chat
+  var waSeen; try { waSeen = sessionStorage.getItem("blm_wa_seen"); } catch (e) {}
+  if (!waSeen) setTimeout(function () { if (!waWrap.classList.contains("hidden")) waOpen(true); }, 3000);
 
   /* ---------- REVEAL ---------- */
   if ("IntersectionObserver" in window) {
