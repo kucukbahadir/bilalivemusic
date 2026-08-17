@@ -507,7 +507,7 @@
       "ck.c_func": "Fonctionnel", "ck.c_stat": "Statistiques", "ck.c_mkt": "Marketing", "pg.home": "Accueil"
     },
     tr: {
-      "wa.name": "Bilalive Music",
+      "wa.name": "Bilal",
       "wa.online": "Çevrimiçi",
       "wa.greet": "Merhaba! Size nasıl yardımcı olabiliriz? Etkinliğiniz için canlı müzik mi arıyorsunuz? Yazın, hemen dönelim.",
       "wa.cta": "Sohbeti başlat",
