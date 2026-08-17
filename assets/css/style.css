@@ -173,8 +173,8 @@ section{padding:110px 0}
 .wa-panel{order:-1;width:300px;max-width:78vw;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 22px 54px rgba(0,0,0,.3);transform-origin:bottom left;opacity:0;visibility:hidden;transform:translateY(16px) scale(.92);transition:opacity .28s var(--ease),transform .34s var(--ease),visibility .28s}
 .wa-widget.open .wa-panel{opacity:1;visibility:visible;transform:none}
 .wa-head{background:#075E54;color:#fff;padding:13px 15px;display:flex;align-items:center;gap:11px}
-.wa-ava{width:40px;height:40px;border-radius:50%;background:#128C7E;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-.wa-ava svg{width:22px;height:22px}
+.wa-ava{width:42px;height:42px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:#128C7E;border:2px solid rgba(255,255,255,.25)}
+.wa-ava img{width:100%;height:100%;object-fit:cover;display:block}
 .wa-id b{display:block;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;line-height:1.15}
 .wa-id small{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.82);font-size:12px;margin-top:1px}
 .wa-id small::before{content:"";width:7px;height:7px;border-radius:50%;background:#4ade80}

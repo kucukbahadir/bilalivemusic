@@ -64,7 +64,7 @@
   waWrap.innerHTML =
     '<div class="wa-panel" role="dialog" aria-label="WhatsApp">' +
       '<div class="wa-head">' +
-        '<span class="wa-ava">' + WA_ICON + '</span>' +
+        '<span class="wa-ava"><img src="assets/img/bilal-avatar.webp?v=17" alt="Bilal"></span>' +
         '<div class="wa-id"><b data-wa="name">Bilalive Music</b><small data-wa="online">Çevrimiçi</small></div>' +
         '<button class="wa-close" type="button" aria-label="Kapat">&times;</button>' +
       '</div>' +
