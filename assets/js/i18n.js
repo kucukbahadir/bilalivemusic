@@ -14,6 +14,9 @@
 
   var DICT = {
     en: {
+      "rl.eyebrow": "Reels", "rl.t1": "Hear Bilal", "rl.t2": "live.",
+      "rl.sub": "The latest reels from Instagram — hear his voice and stage style right here.",
+      "rl.load": "Play the reels", "rl.note": "Instagram content — loads when you tap", "rl.more": "See all on Instagram",
       "wa.online": "Online",
       "wa.greet": "Hi! How can we help? Looking for live music for your event? Message us and we'll reply right away.",
       "wa.cta": "Start chat",
@@ -138,6 +141,9 @@
       "pg.home": "Home"
     },
     de: {
+      "rl.eyebrow": "Reels", "rl.t1": "Hör Bilal", "rl.t2": "live.",
+      "rl.sub": "Die neuesten Reels von Instagram — hören Sie seine Stimme und seinen Bühnenstil direkt hier.",
+      "rl.load": "Reels abspielen", "rl.note": "Instagram-Inhalt — lädt beim Antippen", "rl.more": "Alle auf Instagram ansehen",
       "wa.online": "Online",
       "wa.greet": "Hallo! Wie können wir helfen? Suchen Sie Live-Musik für Ihr Event? Schreiben Sie uns, wir antworten sofort.",
       "wa.cta": "Chat starten",
@@ -261,6 +267,9 @@
       "ck.c_func": "Funktional", "ck.c_stat": "Statistik", "ck.c_mkt": "Marketing", "pg.home": "Start"
     },
     nl: {
+      "rl.eyebrow": "Reels", "rl.t1": "Hoor Bilal", "rl.t2": "live.",
+      "rl.sub": "De nieuwste reels van Instagram — hoor zijn stem en podiumstijl hier.",
+      "rl.load": "Reels afspelen", "rl.note": "Instagram-content — laadt bij tikken", "rl.more": "Bekijk alles op Instagram",
       "wa.online": "Online",
       "wa.greet": "Hoi! Hoe kunnen we helpen? Op zoek naar livemuziek voor je evenement? Stuur een bericht, we reageren snel.",
       "wa.cta": "Chat starten",
@@ -384,6 +393,9 @@
       "ck.c_func": "Functioneel", "ck.c_stat": "Statistiek", "ck.c_mkt": "Marketing", "pg.home": "Home"
     },
     fr: {
+      "rl.eyebrow": "Reels", "rl.t1": "Écoutez Bilal", "rl.t2": "en live.",
+      "rl.sub": "Les derniers reels d'Instagram — écoutez sa voix et son style de scène ici.",
+      "rl.load": "Lancer les reels", "rl.note": "Contenu Instagram — se charge au clic", "rl.more": "Voir tout sur Instagram",
       "wa.online": "En ligne",
       "wa.greet": "Bonjour ! Comment pouvons-nous aider ? Vous cherchez de la musique live pour votre événement ? Écrivez-nous, réponse rapide.",
       "wa.cta": "Démarrer le chat",

@@ -94,6 +94,46 @@
   var waSeen; try { waSeen = sessionStorage.getItem("blm_wa_seen"); } catch (e) {}
   if (!waSeen) setTimeout(function () { if (!waWrap.classList.contains("hidden")) waOpen(true); }, 3000);
 
+  /* ---------- INSTAGRAM REELS MARQUEE (click-to-load, GDPR-friendly) ---------- */
+  var reelsWrap = $("#reelsWrap"), reelsBtn = $("#reelsLoad");
+  if (reelsWrap && reelsBtn) {
+    reelsBtn.addEventListener("click", function () {
+      var codes = (reelsWrap.getAttribute("data-reels") || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      if (!codes.length) return;
+      var marquee = document.createElement("div"); marquee.className = "reels-marquee";
+      var track = document.createElement("div"); track.className = "reels-track";
+      // two copies for a seamless loop
+      [].concat(codes, codes).forEach(function (code) {
+        var card = document.createElement("div"); card.className = "reel-card";
+        var ifr = document.createElement("iframe");
+        ifr.src = "https://www.instagram.com/reel/" + code + "/embed/";
+        ifr.setAttribute("loading", "lazy");
+        ifr.setAttribute("scrolling", "no");
+        ifr.setAttribute("allowtransparency", "true");
+        ifr.setAttribute("allow", "encrypted-media");
+        ifr.setAttribute("title", "Instagram reel");
+        card.appendChild(ifr); track.appendChild(card);
+      });
+      marquee.appendChild(track);
+      reelsWrap.innerHTML = ""; reelsWrap.appendChild(marquee);
+      // auto-scroll right-to-left, pause on hover/touch
+      var paused = false;
+      marquee.addEventListener("mouseenter", function () { paused = true; });
+      marquee.addEventListener("mouseleave", function () { paused = false; });
+      marquee.addEventListener("touchstart", function () { paused = true; }, { passive: true });
+      marquee.addEventListener("touchend", function () { setTimeout(function () { paused = false; }, 1200); });
+      function step() {
+        if (!paused) {
+          marquee.scrollLeft += 0.7;
+          var half = marquee.scrollWidth / 2;
+          if (marquee.scrollLeft >= half) marquee.scrollLeft -= half;
+        }
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
   /* ---------- REVEAL ---------- */
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (es) {
