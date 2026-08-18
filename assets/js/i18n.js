@@ -14,6 +14,7 @@
 
   var DICT = {
     en: {
+      "pk.lbl_event": "Event", "pk.lbl_budget": "Budget",
       "rl.eyebrow": "Reels", "rl.t1": "Hear Bilal", "rl.t2": "live.",
       "rl.sub": "The latest reels from Instagram — hear his voice and stage style right here.",
       "rl.load": "Play the reels", "rl.note": "Instagram content — loads when you tap", "rl.more": "See all on Instagram",
@@ -141,6 +142,7 @@
       "pg.home": "Home"
     },
     de: {
+      "pk.lbl_event": "Event", "pk.lbl_budget": "Budget",
       "rl.eyebrow": "Reels", "rl.t1": "Hör Bilal", "rl.t2": "live.",
       "rl.sub": "Die neuesten Reels von Instagram — hören Sie seine Stimme und seinen Bühnenstil direkt hier.",
       "rl.load": "Reels abspielen", "rl.note": "Instagram-Inhalt — lädt beim Antippen", "rl.more": "Alle auf Instagram ansehen",
@@ -267,6 +269,7 @@
       "ck.c_func": "Funktional", "ck.c_stat": "Statistik", "ck.c_mkt": "Marketing", "pg.home": "Start"
     },
     nl: {
+      "pk.lbl_event": "Evenement", "pk.lbl_budget": "Budget",
       "rl.eyebrow": "Reels", "rl.t1": "Hoor Bilal", "rl.t2": "live.",
       "rl.sub": "De nieuwste reels van Instagram — hoor zijn stem en podiumstijl hier.",
       "rl.load": "Reels afspelen", "rl.note": "Instagram-content — laadt bij tikken", "rl.more": "Bekijk alles op Instagram",
@@ -393,6 +396,7 @@
       "ck.c_func": "Functioneel", "ck.c_stat": "Statistiek", "ck.c_mkt": "Marketing", "pg.home": "Home"
     },
     fr: {
+      "pk.lbl_event": "Événement", "pk.lbl_budget": "Budget",
       "rl.eyebrow": "Reels", "rl.t1": "Écoutez Bilal", "rl.t2": "en live.",
       "rl.sub": "Les derniers reels d'Instagram — écoutez sa voix et son style de scène ici.",
       "rl.load": "Lancer les reels", "rl.note": "Contenu Instagram — se charge au clic", "rl.more": "Voir tout sur Instagram",
