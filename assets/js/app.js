@@ -97,7 +97,9 @@
   /* ---------- INSTAGRAM REELS MARQUEE (click-to-load, GDPR-friendly) ---------- */
   var reelsWrap = $("#reelsWrap"), reelsBtn = $("#reelsLoad");
   if (reelsWrap && reelsBtn) {
-    reelsBtn.addEventListener("click", function () {
+    var reelsLoaded = false;
+    function loadReels() {
+      if (reelsLoaded) return; reelsLoaded = true;
       var reels = [];
       try { reels = JSON.parse(($("#reelsData") || {}).textContent || "[]"); } catch (e) {}
       if (!reels.length) return;
@@ -140,7 +142,12 @@
         requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
-    });
+    }
+    function reelsMarketingOK() { try { var c = JSON.parse(localStorage.getItem("blm_consent")); return !!(c && c.marketing); } catch (e) { return false; } }
+    reelsBtn.addEventListener("click", loadReels);
+    window.__blmLoadReels = loadReels;
+    // auto-show the reels for visitors who accepted marketing cookies; the button stays only for those who declined
+    if (reelsMarketingOK()) loadReels();
   }
 
   /* ---------- REVEAL ---------- */
@@ -179,7 +186,7 @@
 
   function applyConsent(c) {
     if (c && c.statistics && GA_ID) loadGA();
-    // marketing-gated embeds could be enabled here when needed
+    if (c && c.marketing && window.__blmLoadReels) window.__blmLoadReels(); // reveal reels once marketing is accepted
   }
   var gaLoaded = false;
   function loadGA() {
