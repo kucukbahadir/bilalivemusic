@@ -170,8 +170,12 @@ section{padding:110px 0}
 .reels-marquee{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .reels-marquee::-webkit-scrollbar{display:none}
 .reels-track{display:flex;gap:16px;padding:4px 24px;width:max-content}
-.reel-card{flex:0 0 auto;width:min(300px,72vw);height:454px;border-radius:var(--r-md);overflow:hidden;background:#000;box-shadow:var(--shadow-deep)}
+.reel-card{position:relative;flex:0 0 auto;width:min(300px,72vw);height:454px;border-radius:var(--r-md);overflow:hidden;background:#000;box-shadow:var(--shadow-deep)}
 .reel-card iframe{width:100%;height:640px;border:0;display:block}
+.reel-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;pointer-events:none;padding:30px 15px 13px;background:linear-gradient(0deg,rgba(7,11,22,.96),rgba(7,11,22,.6) 62%,transparent)}
+.reel-cap .song{display:flex;align-items:center;gap:8px;color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;line-height:1.25}
+.reel-cap .song .icon{width:15px;height:15px;color:var(--gold);flex:0 0 auto}
+.reel-cap .artist{display:block;margin-top:2px;padding-left:23px;color:rgba(255,255,255,.68);font-size:12.5px}
 @media(max-width:560px){.reel-card{height:430px}}
 /* floating WhatsApp chat widget */
 .wa-widget{position:fixed;left:22px;bottom:22px;z-index:95;display:flex;flex-direction:column;align-items:flex-start;gap:14px;transition:opacity .3s,transform .3s,visibility .3s;pointer-events:none}

@@ -98,21 +98,30 @@
   var reelsWrap = $("#reelsWrap"), reelsBtn = $("#reelsLoad");
   if (reelsWrap && reelsBtn) {
     reelsBtn.addEventListener("click", function () {
-      var codes = (reelsWrap.getAttribute("data-reels") || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-      if (!codes.length) return;
+      var reels = [];
+      try { reels = JSON.parse(($("#reelsData") || {}).textContent || "[]"); } catch (e) {}
+      if (!reels.length) return;
       var marquee = document.createElement("div"); marquee.className = "reels-marquee";
       var track = document.createElement("div"); track.className = "reels-track";
+      function esc(s) { var d = document.createElement("span"); d.textContent = s || ""; return d.innerHTML; }
       // two copies for a seamless loop
-      [].concat(codes, codes).forEach(function (code) {
+      [].concat(reels, reels).forEach(function (r) {
         var card = document.createElement("div"); card.className = "reel-card";
         var ifr = document.createElement("iframe");
-        ifr.src = "https://www.instagram.com/reel/" + code + "/embed/";
+        ifr.src = "https://www.instagram.com/reel/" + r.c + "/embed/";
         ifr.setAttribute("loading", "lazy");
         ifr.setAttribute("scrolling", "no");
         ifr.setAttribute("allowtransparency", "true");
         ifr.setAttribute("allow", "encrypted-media");
-        ifr.setAttribute("title", "Instagram reel");
-        card.appendChild(ifr); track.appendChild(card);
+        ifr.setAttribute("title", r.t ? (r.t + (r.a ? " — " + r.a : "")) : "Instagram reel");
+        card.appendChild(ifr);
+        if (r.t) {
+          var cap = document.createElement("div"); cap.className = "reel-cap";
+          cap.innerHTML = '<span class="song"><svg class="icon"><use href="#i-note"/></svg>' + esc(r.t) + '</span>' +
+                          (r.a ? '<span class="artist">' + esc(r.a) + '</span>' : '');
+          card.appendChild(cap);
+        }
+        track.appendChild(card);
       });
       marquee.appendChild(track);
       reelsWrap.innerHTML = ""; reelsWrap.appendChild(marquee);
