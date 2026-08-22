@@ -157,6 +157,17 @@ section{padding:110px 0}
 .video-card.tall::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,11,22,.72),transparent 45%)}
 .video-card.tall .label{z-index:2}
 .side-portrait{width:100%;border-radius:var(--r-sm);margin-bottom:20px;box-shadow:var(--shadow-soft)}
+/* hero "listen first" line */
+.hero-listen{color:var(--gold);font-family:'Manrope',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:.01em;margin:0 0 24px}
+@media(max-width:900px){.hero-listen{margin-left:auto;margin-right:auto}}
+/* packages starting-price note */
+.pkg-note{max-width:660px;margin:16px auto 0;text-align:center;color:var(--text-2);font-size:13.5px;line-height:1.55}
+/* repertoire chips */
+.rep-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.rep-chip{display:inline-flex;align-items:center;background:#fff;border:1px solid rgba(11,16,32,.08);border-radius:100px;padding:12px 22px;font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:var(--navy);box-shadow:var(--shadow-soft);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.rep-chip:hover{transform:translateY(-2px);box-shadow:var(--shadow-deep);border-color:var(--gold)}
+/* about artist role byline */
+.ab-role{display:inline-block;margin-top:14px;color:var(--gold);font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em}
 /* Instagram Reels marquee */
 .reels-wrap{margin-top:44px}
 .reels-cover{position:relative;display:flex;align-items:center;justify-content:center;gap:16px;width:max-content;max-width:calc(100% - 48px);margin:0 auto;border:none;cursor:pointer;color:#fff;border-radius:100px;padding:16px 30px 16px 20px;background:linear-gradient(95deg,#833AB4,#C13584,#E1306C,#F56040);box-shadow:0 14px 34px rgba(193,53,132,.4);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
